@@ -1,0 +1,4892 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Taste Safari with Rajat · Cinematic Food Exploration & Untold Stories</title>
+  <meta name="description" content="Join Rajat Punia on an unfiltered, cinematic food-travel journey uncovering Bharatpur's authentic street food, legendary halwais, royal recipes, and hidden culinary gems.">
+  <meta name="keywords" content="Taste Safari, Rajat Punia, Bharatpur Food, Street Food Rajasthan, Food Vlogging, Braj Cuisine, Bedmi Puri, Kachori, Laal Maas">
+  <meta name="author" content="Rajat Punia">
+  <meta name="theme-color" content="#140a04">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tastesafari.in/">
+  <meta property="og:title" content="Taste Safari with Rajat · Authentic Food Exploration">
+  <meta property="og:description" content="Discover Bharatpur's authentic culinary soul with Rajat Punia. 80+ documented dishes, 100% genuine reviews, zero sponsored hype.">
+  <meta property="og:image" content="assets/taste-safari-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Taste Safari with Rajat">
+  <meta name="twitter:description" content="Uncovering Bharatpur's hidden culinary legends with Rajat Punia.">
+  <meta name="twitter:image" content="assets/taste-safari-logo.png">
+
+  <link rel="icon" type="image/png" href="assets/taste-safari-logo.png">
+
+  <style>
+    /* ==========================================================================
+       TASTE SAFARI WITH RAJAT — MASTER STYLESHEET (PURE CSS3)
+       ========================================================================== */
+
+    :root {
+      /* Dark Theme (Default) */
+      --bg-base: #0a0502;
+      --bg-surface: #140a04;
+      --bg-elevated: #1f1108;
+      --bg-card: rgba(26, 14, 7, 0.75);
+      --bg-overlay: rgba(10, 5, 2, 0.94);
+      
+      --text-main: #f5f5f4;
+      --text-muted: #a8a29e;
+      --text-dim: #78716c;
+      --text-heading: #fef3c7;
+      
+      --accent: #f59e0b;
+      --accent-hover: #fbbf24;
+      --accent-deep: #b45309;
+      --accent-orange: #ea580c;
+      --accent-glow: rgba(245, 158, 11, 0.22);
+      
+      --border-subtle: rgba(245, 158, 11, 0.16);
+      --border-strong: rgba(245, 158, 11, 0.38);
+      --border-neutral: rgba(255, 255, 255, 0.08);
+
+      --font-display: Georgia, Cambria, "Times New Roman", Times, serif;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+      --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.6), 0 0 15px rgba(245, 158, 11, 0.08);
+      --shadow-lg: 0 20px 40px -10px rgba(0, 0, 0, 0.8), 0 0 30px rgba(245, 158, 11, 0.15);
+
+      --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-normal: 280ms cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-slow: 450ms cubic-bezier(0.16, 1, 0.3, 1);
+
+      --container-max: 1280px;
+      --header-height: 76px;
+      --font-scale: 1rem;
+    }
+
+    [data-theme="light"] {
+      --bg-base: #fbf7ee;
+      --bg-surface: #ffffff;
+      --bg-elevated: #f4ede0;
+      --bg-card: rgba(255, 255, 255, 0.92);
+      --bg-overlay: rgba(251, 247, 238, 0.96);
+      
+      --text-main: #1c1917;
+      --text-muted: #57534e;
+      --text-dim: #78716c;
+      --text-heading: #291a0c;
+      
+      --accent: #d97706;
+      --accent-hover: #b45309;
+      --accent-deep: #92400e;
+      --accent-orange: #c2410c;
+      --accent-glow: rgba(217, 119, 6, 0.18);
+      
+      --border-subtle: rgba(217, 119, 6, 0.2);
+      --border-strong: rgba(217, 119, 6, 0.45);
+      --border-neutral: rgba(0, 0, 0, 0.09);
+
+      --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 10px 25px -5px rgba(120, 53, 15, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow-lg: 0 20px 40px -10px rgba(120, 53, 15, 0.12), 0 4px 16px rgba(0, 0, 0, 0.06);
+    }
+
+    [data-font-size="large"] { --font-scale: 1.12rem; }
+    [data-font-size="xlarge"] { --font-scale: 1.25rem; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+    .reduced-motion *, .reduced-motion *::before, .reduced-motion *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: var(--font-scale);
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      accent-color: var(--accent);
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      background-image: 
+        radial-gradient(circle at 15% 20%, rgba(245, 158, 11, 0.035) 0%, transparent 40%),
+        radial-gradient(circle at 85% 60%, rgba(234, 88, 12, 0.035) 0%, transparent 45%);
+      background-attachment: fixed;
+    }
+
+    img, video {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+      color: inherit;
+      background: none;
+      border: none;
+      outline: none;
+    }
+
+    button {
+      cursor: pointer;
+      user-select: none;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-display);
+      color: var(--text-heading);
+      line-height: 1.25;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      text-wrap: balance;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .section-padding {
+      padding-top: 5.5rem;
+      padding-bottom: 5.5rem;
+      position: relative;
+    }
+
+    .section-header {
+      margin-bottom: 3.25rem;
+      text-align: center;
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      margin-bottom: 1rem;
+    }
+
+    .section-lead {
+      color: var(--text-muted);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.75rem 1.6rem;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      border-radius: var(--radius-md);
+      transition: all var(--transition-fast);
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .btn:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-orange) 100%);
+      color: #0c0602 !important;
+      box-shadow: 0 4px 18px var(--accent-glow);
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--accent-hover) 0%, var(--accent) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px var(--accent-glow);
+    }
+
+    .btn-secondary {
+      background: var(--bg-surface);
+      color: var(--text-main);
+      border: 1px solid var(--border-subtle);
+    }
+    .btn-secondary:hover {
+      background: var(--bg-elevated);
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .btn-insta {
+      background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+      color: #ffffff !important;
+      box-shadow: 0 4px 18px rgba(253, 29, 29, 0.25);
+    }
+    .btn-insta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(253, 29, 29, 0.4);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border-strong);
+      color: var(--text-heading);
+    }
+    .btn-outline:hover {
+      background: var(--accent-glow);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .btn-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-md);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      transition: all var(--transition-fast);
+    }
+    .btn-icon:hover {
+      background: var(--bg-elevated);
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .icon {
+      width: 1.15rem;
+      height: 1.15rem;
+      stroke-width: 2;
+      stroke: currentColor;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    /* ==========================================================================
+       SECTION 01 — CINEMATIC OPENING SCREEN
+       ========================================================================== */
+    #opening-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #070302;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    #opening-screen.hidden {
+      opacity: 0;
+      transform: scale(1.05);
+      pointer-events: none;
+    }
+
+    .opening-ambient {
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 50% 40%, rgba(245, 158, 11, 0.16) 0%, transparent 60%),
+        radial-gradient(circle at 20% 80%, rgba(234, 88, 12, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .opening-content {
+      position: relative;
+      z-index: 2;
+      max-width: 640px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .opening-logo-wrapper {
+      position: relative;
+      width: 170px;
+      height: 170px;
+      margin-bottom: 2rem;
+    }
+
+    .opening-logo-glow {
+      position: absolute;
+      inset: -15px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.4) 0%, transparent 70%);
+      animation: pulseGlow 3s ease-in-out infinite;
+    }
+
+    .opening-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(0 10px 25px rgba(0,0,0,0.8));
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1); opacity: 0.6; }
+      50% { transform: scale(1.15); opacity: 0.9; }
+    }
+
+    .opening-kicker {
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .opening-title {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .opening-subtitle {
+      font-size: 1.125rem;
+      color: #d6d3d1;
+      margin-bottom: 2.25rem;
+      font-weight: 400;
+      max-width: 500px;
+    }
+
+    .opening-progress-bar {
+      width: 240px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 1.75rem;
+      position: relative;
+    }
+
+    .opening-progress-fill {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent) 0%, var(--accent-orange) 100%);
+      transition: width 0.3s ease;
+    }
+
+    .opening-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .skip-btn {
+      font-size: 0.875rem;
+      color: #a8a29e;
+      padding: 0.5rem 1rem;
+      transition: color var(--transition-fast);
+      cursor: pointer;
+    }
+    .skip-btn:hover {
+      color: #fff;
+    }
+
+    /* ==========================================================================
+       SECTION 02 — HEADER AND NAVIGATION
+       ========================================================================== */
+    #main-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: var(--header-height);
+      background: var(--bg-card);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-neutral);
+      transition: background var(--transition-normal), border-color var(--transition-normal);
+    }
+
+    .header-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .brand-logo-img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: var(--text-heading);
+      line-height: 1.1;
+    }
+
+    .brand-sub {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-item-link {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      position: relative;
+      padding: 0.5rem 0;
+      white-space: nowrap;
+    }
+
+    .nav-item-link:hover,
+    .nav-item-link.active {
+      color: var(--text-heading);
+    }
+
+    .nav-item-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--accent);
+      transition: width var(--transition-fast);
+      border-radius: 2px;
+    }
+
+    .nav-item-link:hover::after,
+    .nav-item-link.active::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .mobile-hamburger {
+      display: none;
+    }
+
+    /* ==========================================================================
+       MODALS & OVERLAYS
+       ========================================================================== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: var(--bg-overlay);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: all var(--transition-normal);
+    }
+
+    .modal-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .search-container {
+      width: 100%;
+      max-width: 680px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transform: translateY(20px);
+      transition: transform var(--transition-normal);
+    }
+
+    .modal-overlay.open .search-container {
+      transform: translateY(0);
+    }
+
+    .search-header-box {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border-neutral);
+    }
+
+    .search-input {
+      flex: 1;
+      font-size: 1.15rem;
+      color: var(--text-heading);
+    }
+    .search-input::placeholder {
+      color: var(--text-dim);
+    }
+
+    .search-chips-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.5rem;
+      background: var(--bg-elevated);
+      overflow-x: auto;
+      font-size: 0.8125rem;
+      border-bottom: 1px solid var(--border-neutral);
+    }
+
+    .search-chip {
+      padding: 0.3rem 0.75rem;
+      border-radius: var(--radius-sm);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all var(--transition-fast);
+    }
+    .search-chip:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .search-results-list {
+      max-height: 380px;
+      overflow-y: auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .search-result-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.75rem;
+      border-radius: var(--radius-md);
+      background: var(--bg-elevated);
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .search-result-item:hover {
+      border-color: var(--accent);
+      background: var(--bg-surface);
+      transform: translateX(4px);
+    }
+
+    .search-result-thumb {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .search-result-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .search-result-title {
+      font-weight: 700;
+      color: var(--text-heading);
+      font-size: 0.95rem;
+      margin-bottom: 0.2rem;
+    }
+    .search-result-meta {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+
+    /* Settings Slide-Over Drawer */
+    .drawer-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 2100;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      opacity: 0;
+      visibility: hidden;
+      transition: all var(--transition-normal);
+    }
+    .drawer-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .settings-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: 400px;
+      background: var(--bg-surface);
+      border-left: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-lg);
+      z-index: 2101;
+      transform: translateX(100%);
+      transition: transform var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 1.75rem;
+      overflow-y: auto;
+    }
+    .drawer-overlay.open .settings-drawer {
+      transform: translateX(0);
+    }
+
+    .drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-neutral);
+    }
+
+    .settings-group {
+      margin-bottom: 1.75rem;
+    }
+
+    .settings-label {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .settings-options-row {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .setting-pill-btn {
+      flex: 1;
+      padding: 0.6rem 0.8rem;
+      border-radius: var(--radius-md);
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-neutral);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-align: center;
+      transition: all var(--transition-fast);
+    }
+    .setting-pill-btn.active {
+      background: var(--accent);
+      color: #0c0602;
+      border-color: var(--accent);
+      font-weight: 700;
+    }
+
+    .mobile-menu-drawer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: 320px;
+      background: var(--bg-surface);
+      border-right: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-lg);
+      z-index: 2200;
+      transform: translateX(-100%);
+      transition: transform var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 1.5rem;
+      overflow-y: auto;
+    }
+    .drawer-overlay.menu-open .mobile-menu-drawer {
+      transform: translateX(0);
+    }
+
+    .mobile-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .mobile-nav-link {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      display: block;
+      padding: 0.5rem 0;
+    }
+
+    /* ==========================================================================
+       SECTION 03 — HOME / HERO SECTION
+       ========================================================================== */
+    #home {
+      padding-top: 4.5rem;
+      padding-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .hero-kicker-strip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 4.5vw, 4rem);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+
+    .hero-title .highlight {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-orange) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-lead {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 2.25rem;
+      max-width: 600px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-visual-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-lg);
+      background: var(--bg-surface);
+      aspect-ratio: 4 / 5;
+    }
+
+    .hero-visual-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform var(--transition-slow);
+    }
+    .hero-visual-card:hover .hero-visual-img {
+      transform: scale(1.03);
+    }
+
+    .hero-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10, 5, 2, 0.9) 0%, rgba(10, 5, 2, 0.2) 50%, transparent 100%);
+    }
+
+    .hero-floating-badge {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      right: 1.5rem;
+      background: rgba(20, 10, 4, 0.88);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .hero-badge-title {
+      font-weight: 700;
+      color: var(--text-heading);
+      font-size: 0.9375rem;
+    }
+    .hero-badge-sub {
+      font-size: 0.8125rem;
+      color: var(--accent);
+    }
+
+    .hero-stats-row {
+      margin-top: 3.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--border-neutral);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--text-heading);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+
+    .stat-label {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ==========================================================================
+       SECTION 04 — INTRODUCTION / ABOUT PREVIEW
+       (Exclusively hosts Rajat's interview & News18 introduction video)
+       ========================================================================== */
+    #intro-section {
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-neutral);
+      border-bottom: 1px solid var(--border-neutral);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .video-player-container {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: #000;
+      border: 1px solid var(--border-strong);
+      box-shadow: var(--shadow-lg);
+      aspect-ratio: 9 / 16;
+      max-height: 560px;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 340px;
+    }
+
+    .video-element {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-badge-overlay {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(6px);
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent);
+      border: 1px solid var(--border-subtle);
+      z-index: 2;
+    }
+
+    .intro-content-side {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .intro-story-p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .philosophy-card {
+      background: var(--bg-elevated);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      border: 1px solid var(--border-subtle);
+      margin-top: 0.5rem;
+    }
+
+    .philosophy-title {
+      font-weight: 700;
+      color: var(--text-heading);
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .philosophy-desc {
+      font-size: 0.9375rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       SECTION 05 — ADVENTURES (DISCOVERY PLATFORM)
+       ========================================================================== */
+    #adventures {
+      background: var(--bg-base);
+    }
+
+    .adventures-controls-panel {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-neutral);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .category-filter-tabs {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      overflow-x: auto;
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border-neutral);
+      scrollbar-width: thin;
+    }
+
+    .category-tab-btn {
+      padding: 0.55rem 1.1rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: var(--radius-md);
+      background: var(--bg-elevated);
+      color: var(--text-muted);
+      border: 1px solid transparent;
+      white-space: nowrap;
+      transition: all var(--transition-fast);
+    }
+    .category-tab-btn:hover {
+      color: var(--text-heading);
+      border-color: var(--border-subtle);
+    }
+    .category-tab-btn.active {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-orange) 100%);
+      color: #0c0602;
+      font-weight: 700;
+    }
+
+    .controls-secondary-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .adventures-search-wrapper {
+      position: relative;
+      flex: 1;
+      min-width: 260px;
+      max-width: 440px;
+    }
+
+    .adventures-search-input {
+      width: 100%;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.65rem 1rem 0.65rem 2.5rem;
+      font-size: 0.9375rem;
+      color: var(--text-heading);
+      transition: border-color var(--transition-fast);
+    }
+    .adventures-search-input:focus {
+      border-color: var(--accent);
+    }
+
+    .adventures-search-icon {
+      position: absolute;
+      left: 0.85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-dim);
+      pointer-events: none;
+    }
+
+    .controls-actions-group {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .sort-select {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.65rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-main);
+      cursor: pointer;
+    }
+
+    .adventures-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+
+    .adventure-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition-normal);
+      position: relative;
+    }
+    .adventure-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent);
+    }
+
+    .adventure-card-media {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .adventure-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+    .adventure-card:hover .adventure-card-img {
+      transform: scale(1.05);
+    }
+
+    .card-fav-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(10, 5, 2, 0.75);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-fast);
+      z-index: 3;
+    }
+    .card-fav-btn:hover,
+    .card-fav-btn.favorited {
+      background: #dc2626;
+      border-color: #dc2626;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    .card-category-tag {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      background: rgba(10, 5, 2, 0.85);
+      backdrop-filter: blur(6px);
+      border: 1px solid var(--border-subtle);
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .adventure-card-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-meta-line {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 0.5rem;
+      line-height: 1.25;
+    }
+
+    .card-desc {
+      font-size: 0.9375rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+
+    .card-tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .card-tag {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      background: var(--bg-elevated);
+      padding: 0.2rem 0.5rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-neutral);
+    }
+
+    .card-footer-strip {
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-neutral);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .card-price {
+      font-weight: 700;
+      color: var(--text-heading);
+      font-size: 0.95rem;
+    }
+
+    .card-actions-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Adventure Details Modal */
+    .adventure-detail-modal {
+      width: 100%;
+      max-width: 820px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      max-height: 90vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(10, 5, 2, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .modal-close-btn:hover {
+      background: var(--accent);
+      color: #000;
+      transform: scale(1.08);
+    }
+
+    .modal-hero-media {
+      width: 100%;
+      height: 340px;
+      position: relative;
+      background: #000;
+    }
+
+    .modal-hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .modal-body-padding {
+      padding: 2rem 2.25rem;
+    }
+
+    /* SHARE SPOT MODAL */
+    .share-modal-box {
+      width: 100%;
+      max-width: 520px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: 2rem;
+      position: relative;
+    }
+
+    .share-options-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.85rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .share-btn-tile {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius-md);
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-neutral);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      color: var(--text-main);
+      transition: all var(--transition-fast);
+    }
+    .share-btn-tile:hover {
+      border-color: var(--accent);
+      background: var(--bg-surface);
+      transform: translateY(-2px);
+    }
+
+    .share-copy-box {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.5rem 0.75rem;
+    }
+    .share-link-input {
+      flex: 1;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    /* ==========================================================================
+       SECTION 06 — COLLECTIONS
+       ========================================================================== */
+    #collections {
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-neutral);
+      border-bottom: 1px solid var(--border-neutral);
+    }
+
+    .collections-nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-neutral);
+      margin-bottom: 2.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .collection-tabs {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .collection-tab-link {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-dim);
+      padding-bottom: 0.75rem;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .collection-tab-link.active {
+      color: var(--text-heading);
+    }
+    .collection-tab-link.active::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 3px;
+    }
+
+    .tab-badge {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: var(--accent-glow);
+      color: var(--accent);
+      border: 1px solid var(--border-subtle);
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-full);
+    }
+
+    .empty-state-box {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: var(--bg-elevated);
+      border-radius: var(--radius-lg);
+      border: 1px dashed var(--border-subtle);
+    }
+    .empty-icon {
+      width: 48px;
+      height: 48px;
+      color: var(--text-dim);
+      margin: 0 auto 1rem;
+    }
+
+    /* ==========================================================================
+       SECTION 07 — VIDEOS AND INSTAGRAM REELS (PORTRAIT VIDEO EXPERIENCE)
+       (Dedicated authentic culinary cooking videos — NO intro video here)
+       ========================================================================== */
+    #videos {
+      background: var(--bg-base);
+    }
+
+    .video-bento-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.25rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .featured-video-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .featured-video-preview {
+      position: relative;
+      aspect-ratio: 9 / 16;
+      max-height: 580px;
+      background: #000;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .featured-video-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+
+    .featured-video-preview:hover .featured-video-img {
+      transform: scale(1.04);
+    }
+
+    .play-overlay-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-orange) 100%);
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 30px rgba(245, 158, 11, 0.6);
+      transition: all var(--transition-fast);
+      z-index: 2;
+    }
+
+    .featured-video-preview:hover .play-overlay-button {
+      transform: translate(-50%, -50%) scale(1.12);
+    }
+
+    .featured-video-body {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    /* Video Player Theatre Modal (Portrait 9:16 Optimized) */
+    #theatre-video-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 3500;
+      background: rgba(3, 1, 0, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: all var(--transition-normal);
+    }
+
+    #theatre-video-modal.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .theatre-box {
+      width: 100%;
+      max-width: 440px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-height: 95vh;
+    }
+
+    .theatre-video-wrap {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      max-height: 72vh;
+      background: #000;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
+      border: 1px solid var(--border-strong);
+    }
+
+    .theatre-video-wrap video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .theatre-meta-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    /* Instagram Reels Grid */
+    .reels-section-title {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .reels-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .reel-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      aspect-ratio: 9 / 16;
+      position: relative;
+      transition: all var(--transition-normal);
+      text-decoration: none;
+    }
+    .reel-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent);
+    }
+
+    .reel-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .reel-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10, 5, 2, 0.95) 0%, rgba(10, 5, 2, 0.3) 50%, rgba(10, 5, 2, 0.1) 100%);
+    }
+
+    .reel-content-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.25rem;
+      z-index: 2;
+    }
+
+    .reel-views-tag {
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .reel-caption {
+      font-weight: 700;
+      color: #fff;
+      font-size: 0.95rem;
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+    }
+
+    .reel-ig-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #ffffff;
+      background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ==========================================================================
+       SECTION 08 — GALLERY (PORTRAIT EDITORIAL FOOD PHOTOGRAPHY)
+       (Dedicated culinary food photography — NO intro video here)
+       ========================================================================== */
+    #gallery {
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-neutral);
+      border-bottom: 1px solid var(--border-neutral);
+    }
+
+    .gallery-masonry-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      cursor: pointer;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-elevated);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-normal);
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent);
+    }
+
+    .gallery-item.span-2-2,
+    .gallery-item.span-2-1,
+    .gallery-item.span-1-2 {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+    .gallery-item:hover .gallery-img {
+      transform: scale(1.06);
+    }
+
+    .gallery-item-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10, 5, 2, 0.9) 0%, rgba(10, 5, 2, 0.2) 50%, transparent 80%);
+      opacity: 0;
+      transition: opacity var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.35rem 1.15rem;
+    }
+    .gallery-item:hover .gallery-item-overlay {
+      opacity: 1;
+    }
+
+    .gallery-item-title {
+      font-weight: 700;
+      color: #fff;
+      font-size: 1.05rem;
+      line-height: 1.3;
+      margin-bottom: 0.25rem;
+    }
+    .gallery-item-location {
+      font-size: 0.8125rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* Lightbox */
+    #gallery-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 3000;
+      background: rgba(5, 2, 1, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: all var(--transition-normal);
+    }
+    #gallery-lightbox.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .lightbox-wrapper {
+      position: relative;
+      max-width: 900px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .lightbox-main-img {
+      max-width: 100%;
+      max-height: 72vh;
+      object-fit: contain;
+      border-radius: var(--radius-md);
+      box-shadow: 0 0 50px rgba(0,0,0,0.9);
+      border: 1px solid var(--border-neutral);
+    }
+
+    .lightbox-caption-box {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .lightbox-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(20, 10, 4, 0.8);
+      border: 1px solid var(--border-subtle);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      z-index: 10;
+    }
+    .lightbox-nav-btn:hover {
+      background: var(--accent);
+      color: #000;
+      transform: translateY(-50%) scale(1.1);
+    }
+    .lightbox-prev { left: -70px; }
+    .lightbox-next { right: -70px; }
+
+    /* ==========================================================================
+       SECTION 09 — FULL ABOUT SECTION
+       ========================================================================== */
+    #about {
+      background: var(--bg-base);
+    }
+
+    .about-main-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-image-stack {
+      position: relative;
+    }
+
+    .about-primary-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-lg);
+      aspect-ratio: 4 / 5;
+    }
+
+    .about-logo-stamp {
+      position: absolute;
+      bottom: -25px;
+      right: -25px;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: var(--bg-surface);
+      border: 3px solid var(--accent);
+      box-shadow: var(--shadow-lg);
+      padding: 6px;
+    }
+    .about-logo-stamp img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .about-bio-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .about-bio-p {
+      color: var(--text-muted);
+      font-size: 1.0625rem;
+      line-height: 1.75;
+    }
+
+    .about-pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .pillar-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+    }
+
+    .pillar-num {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+    .pillar-title {
+      font-weight: 700;
+      color: var(--text-heading);
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+    }
+    .pillar-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       SECTION 10 — COLLABORATIONS
+       ========================================================================== */
+    #collaborations {
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-neutral);
+      border-bottom: 1px solid var(--border-neutral);
+    }
+
+    .collab-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .collab-card {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition-normal);
+    }
+    .collab-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .collab-icon-box {
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius-md);
+      background: var(--accent-glow);
+      border: 1px solid var(--border-strong);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .collab-card-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 0.75rem;
+    }
+
+    .collab-card-desc {
+      font-size: 0.9375rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      flex: 1;
+      margin-bottom: 1.25rem;
+    }
+
+    .collab-points-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.8125rem;
+      color: var(--text-main);
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-neutral);
+    }
+    .collab-point-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .collab-banner-box {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(234, 88, 12, 0.05) 100%);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    /* ==========================================================================
+       SECTION 11 — CONTACT
+       ========================================================================== */
+    #contact {
+      background: var(--bg-base);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 3.5rem;
+    }
+
+    .contact-info-side {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .contact-info-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .contact-info-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      background: var(--accent-glow);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-info-label {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-info-val {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-heading);
+    }
+
+    .contact-form-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      margin-bottom: 0.45rem;
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 1rem;
+      color: var(--text-heading);
+      font-size: 0.9375rem;
+      transition: border-color var(--transition-fast);
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--accent);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-char-counter {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      text-align: right;
+      margin-top: 0.35rem;
+    }
+
+    .form-checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1.75rem;
+    }
+    .form-checkbox-row input {
+      margin-top: 0.3rem;
+      width: 18px;
+      height: 18px;
+      accent-color: var(--accent);
+    }
+    .form-checkbox-label {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .form-error-msg {
+      color: #ef4444;
+      font-size: 0.8125rem;
+      margin-top: 0.3rem;
+      display: none;
+    }
+
+    /* ==========================================================================
+       SECTION 12 — INSTAGRAM AND FOOTER
+       ========================================================================== */
+    #site-footer {
+      background: #060302;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 4.5rem;
+      padding-bottom: 2.5rem;
+      color: #a8a29e;
+    }
+
+    .footer-top-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .footer-brand-box {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .footer-logo-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .footer-brand-desc {
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      max-width: 320px;
+    }
+
+    .footer-social-row {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .footer-heading {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: #fff;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      font-size: 0.875rem;
+    }
+    .footer-links-list a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom-strip {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8125rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .back-to-top-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--accent);
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       TOAST NOTIFICATIONS
+       ========================================================================== */
+    #toast-notification {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 4000;
+      background: var(--bg-surface);
+      color: var(--text-heading);
+      border: 1px solid var(--accent);
+      border-radius: var(--radius-md);
+      padding: 0.85rem 1.5rem;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all var(--transition-normal);
+      pointer-events: none;
+      font-size: 0.9375rem;
+      font-weight: 600;
+    }
+    #toast-notification.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE MEDIA QUERIES (FULL MOBILE RESPONSIVE ENGINE)
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.75rem;
+      }
+      .hero-visual-card {
+        max-width: 440px;
+        margin: 0 auto;
+        aspect-ratio: 1;
+      }
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .video-player-container {
+        max-width: 320px;
+      }
+      .about-main-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .about-primary-card {
+        max-width: 440px;
+        margin: 0 auto;
+      }
+      .video-bento-grid {
+        grid-template-columns: 1fr;
+      }
+      .reels-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .gallery-masonry-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .collab-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-top-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .lightbox-prev { left: 10px; }
+      .lightbox-next { right: 10px; }
+    }
+
+    @media (max-width: 820px) {
+      :root {
+        --header-height: 68px;
+      }
+      .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+      }
+      .nav-links, .btn-primary.header-work-btn {
+        display: none;
+      }
+      .mobile-hamburger {
+        display: inline-flex;
+      }
+      .hero-stats-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.75rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      :root {
+        --header-height: 62px;
+      }
+      .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .section-padding {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+      .section-title {
+        font-size: 1.85rem;
+        letter-spacing: -0.01em;
+      }
+      .section-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+      }
+      .hero-title {
+        font-size: clamp(2rem, 8vw, 2.75rem);
+        line-height: 1.15;
+      }
+      .hero-lead {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.75rem;
+      }
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+      }
+      .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.85rem 1.25rem;
+        font-size: 0.95rem;
+      }
+      .hero-visual-card {
+        max-width: 100%;
+        aspect-ratio: 4 / 4.5;
+      }
+      .hero-floating-badge {
+        left: 0.85rem;
+        right: 0.85rem;
+        bottom: 0.85rem;
+        padding: 0.75rem 1rem;
+      }
+      .hero-stats-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+        margin-top: 2.5rem;
+        padding-top: 2rem;
+      }
+      .stat-number {
+        font-size: 1.75rem;
+      }
+      .stat-label {
+        font-size: 0.8125rem;
+      }
+      .adventures-controls-panel {
+        padding: 1rem;
+      }
+      .category-filter-tabs {
+        gap: 0.4rem;
+        padding-bottom: 0.6rem;
+      }
+      .category-tab-btn {
+        padding: 0.5rem 0.85rem;
+        font-size: 0.8125rem;
+      }
+      .controls-secondary-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+      }
+      .adventures-search-wrapper {
+        min-width: 100%;
+        max-width: 100%;
+      }
+      .controls-actions-group {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .sort-select {
+        flex: 1;
+      }
+      .adventures-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .adventure-card-media {
+        aspect-ratio: 16 / 10;
+      }
+      .adventure-card-body {
+        padding: 1.25rem;
+      }
+      .card-actions-row {
+        width: 100%;
+        gap: 0.5rem;
+      }
+      .card-actions-row .btn {
+        flex: 1;
+        justify-content: center;
+        padding: 0.65rem 0.85rem;
+        font-size: 0.875rem;
+      }
+      .collections-tab-nav {
+        flex-wrap: wrap;
+        gap: 0.4rem;
+      }
+      .collection-pill-btn {
+        flex: 1 1 calc(50% - 0.4rem);
+        text-align: center;
+        padding: 0.55rem 0.75rem;
+        font-size: 0.8125rem;
+      }
+      .reels-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: 0 auto;
+        gap: 1.5rem;
+      }
+      .gallery-masonry-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+      .gallery-item.span-2-2,
+      .gallery-item.span-2-1,
+      .gallery-item.span-1-2 {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+      .about-pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .contact-form-card {
+        padding: 1.5rem 1.15rem;
+      }
+      .footer-top-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .footer-bottom-strip {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      /* Modals & Overlays on Mobile */
+      .modal-overlay {
+        padding: 0.75rem;
+      }
+      .adventure-detail-modal {
+        max-height: 92vh;
+        border-radius: var(--radius-md);
+      }
+      .modal-hero-media {
+        height: 220px;
+      }
+      .modal-body-padding {
+        padding: 1.25rem 1rem;
+      }
+      .share-modal-box {
+        padding: 1.5rem 1rem;
+      }
+      .share-options-grid {
+        grid-template-columns: 1fr;
+        gap: 0.65rem;
+      }
+      /* Theatre Player on Mobile */
+      #theatre-video-modal {
+        padding: 0.75rem;
+      }
+      .theatre-box {
+        max-width: 100%;
+      }
+      .theatre-video-wrap {
+        aspect-ratio: 16 / 9;
+        border-radius: var(--radius-sm);
+      }
+      .theatre-meta-strip {
+        font-size: 0.875rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      /* Opening Screen on Mobile */
+      #opening-screen {
+        padding: 1.25rem;
+      }
+      .opening-logo-wrapper {
+        width: 130px;
+        height: 130px;
+        margin-bottom: 1.25rem;
+      }
+      .opening-title {
+        font-size: 1.85rem;
+      }
+      .opening-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+      }
+      .opening-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+      }
+      .opening-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .hero-title {
+        font-size: 1.85rem;
+      }
+      .hero-stats-row {
+        grid-template-columns: 1fr;
+      }
+      .header-actions {
+        gap: 0.35rem;
+      }
+      .btn-icon {
+        width: 36px;
+        height: 36px;
+      }
+      .brand-name {
+        font-size: 0.95rem;
+      }
+      .brand-sub {
+        font-size: 0.65rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SECTION 01 — CINEMATIC OPENING SCREEN
+       ========================================================================== -->
+  <aside id="opening-screen" aria-label="Welcome presentation">
+    <div class="opening-ambient"></div>
+    <div class="opening-content">
+      <div class="opening-logo-wrapper">
+        <div class="opening-logo-glow"></div>
+        <img src="assets/taste-safari-logo.png" alt="Taste Safari with Rajat Official Logo" class="opening-logo" onerror="if(!this.dataset.retry){this.dataset.retry='1';this.src='public/assets/taste-safari-logo.png';}">
+      </div>
+      <span class="opening-kicker">A Food-Travel Documentary Experience</span>
+      <h1 class="opening-title">TASTE SAFARI</h1>
+      <p class="opening-subtitle">Uncovering Bharatpur's authentic street legends, royal recipes, and culinary secrets with Rajat Punia.</p>
+      
+      <div class="opening-progress-bar">
+        <div class="opening-progress-fill" id="opening-progress"></div>
+      </div>
+      
+      <div class="opening-actions">
+        <button id="btn-enter-site" class="btn btn-primary">
+          <span>Enter Website</span>
+          <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <button id="btn-skip-intro" class="skip-btn">Skip Intro</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       SECTION 02 — HEADER AND NAVIGATION
+       ========================================================================== -->
+  <header id="main-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand-link" aria-label="Taste Safari with Rajat Home">
+        <img src="assets/taste-safari-logo.png" alt="Taste Safari Logo" class="brand-logo-img" onerror="if(!this.dataset.retry){this.dataset.retry='1';this.src='public/assets/taste-safari-logo.png';}">
+        <div class="brand-text">
+          <span class="brand-name">TASTE SAFARI</span>
+          <span class="brand-sub">WITH RAJAT</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-item-link active">Home</a></li>
+          <li><a href="#adventures" class="nav-item-link">Adventures</a></li>
+          <li><a href="#collections" class="nav-item-link">Collections</a></li>
+          <li><a href="#videos" class="nav-item-link">Videos</a></li>
+          <li><a href="#gallery" class="nav-item-link">Gallery</a></li>
+          <li><a href="#about" class="nav-item-link">About</a></li>
+          <li><a href="#collaborations" class="nav-item-link">Collaborations</a></li>
+          <li><a href="#contact" class="nav-item-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="btn-search-toggle" class="btn-icon" aria-label="Search content">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+
+        <button id="btn-settings-toggle" class="btn-icon" aria-label="Website settings">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </button>
+
+        <a href="https://www.instagram.com/taste_safari_/" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Taste Safari on Instagram (@taste_safari_)">
+          <svg class="icon" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        </a>
+
+        <a href="#collaborations" class="btn btn-primary header-work-btn">Work Together</a>
+
+        <button id="btn-hamburger" class="btn-icon mobile-hamburger" aria-label="Open mobile menu">
+          <svg class="icon" viewBox="0 0 24 24"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       GLOBAL SEARCH OVERLAY
+       ========================================================================== -->
+  <div id="search-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Global Search">
+    <div class="search-container">
+      <div class="search-header-box">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" id="global-search-input" class="search-input" placeholder="Search discoveries, dishes, halwais, reels, videos..." autocomplete="off">
+        <button id="btn-search-clear" class="btn-icon" style="display:none;" aria-label="Clear search">✕</button>
+        <button id="btn-search-close" class="btn-icon" aria-label="Close search">✕</button>
+      </div>
+      <div class="search-chips-row">
+        <span style="color:var(--text-dim); font-weight:600;">Suggestions:</span>
+        <button class="search-chip" data-search="Bedmi Puri">Bedmi Puri</button>
+        <button class="search-chip" data-search="Heeng Kachori">Heeng Kachori</button>
+        <button class="search-chip" data-search="Laal Maas">Laal Maas</button>
+        <button class="search-chip" data-search="Rabdi Malpua">Rabdi Malpua</button>
+        <button class="search-chip" data-search="Jalebi">Saffron Jalebi</button>
+        <button class="search-chip" data-search="Street Food">Street Food</button>
+      </div>
+      <div id="search-results" class="search-results-list">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings Panel Drawer -->
+  <div id="settings-drawer-overlay" class="drawer-overlay">
+    <div class="settings-drawer" role="dialog" aria-label="Website Settings">
+      <div class="drawer-header">
+        <h3 style="font-family:var(--font-display); font-size:1.4rem;">Settings & Preferences</h3>
+        <button id="btn-settings-close" class="btn-icon" aria-label="Close settings">✕</button>
+      </div>
+
+      <div class="settings-group">
+        <div class="settings-label">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <span>Appearance Mode</span>
+        </div>
+        <div class="settings-options-row">
+          <button class="setting-pill-btn active" data-theme-val="dark">Dark Charcoal</button>
+          <button class="setting-pill-btn" data-theme-val="light">Light Cream</button>
+        </div>
+      </div>
+
+      <div class="settings-group">
+        <div class="settings-label">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>
+          <span>Reading Font Size</span>
+        </div>
+        <div class="settings-options-row">
+          <button class="setting-pill-btn active" data-font-val="default">Default</button>
+          <button class="setting-pill-btn" data-font-val="large">Large</button>
+          <button class="setting-pill-btn" data-font-val="xlarge">Extra Large</button>
+        </div>
+      </div>
+
+      <div class="settings-group">
+        <div class="settings-label">
+          <svg class="icon" viewBox="0 0 24 24"><path d="m11.5 12.5-7 7M2 10l7-7m3 11 7-7M9 2l7 7"/></svg>
+          <span>Motion & Animations</span>
+        </div>
+        <div class="settings-options-row">
+          <button class="setting-pill-btn active" data-motion-val="normal">Smooth Motion</button>
+          <button class="setting-pill-btn" data-motion-val="reduced">Reduced Motion</button>
+        </div>
+      </div>
+
+      <div class="settings-group">
+        <div class="settings-label">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4V5zM15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+          <span>Interface Sound Effects</span>
+        </div>
+        <div class="settings-options-row">
+          <button class="setting-pill-btn active" data-sound-val="enabled">Enabled</button>
+          <button class="setting-pill-btn" data-sound-val="muted">Muted</button>
+        </div>
+      </div>
+
+      <div style="margin-top:auto; padding-top:2rem; border-top:1px solid var(--border-neutral); display:flex; flex-direction:column; gap:0.75rem;">
+        <button id="btn-re-experience-intro" class="btn btn-secondary" style="width:100%;">
+          <span>Replay Intro Presentation</span>
+        </button>
+        <button id="btn-reset-settings" class="btn btn-outline" style="width:100%;">
+          <span>Reset All Preferences</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Drawer -->
+  <div id="mobile-nav-overlay" class="drawer-overlay">
+    <div class="mobile-menu-drawer">
+      <div style="display:flex; align-items:center; justify-content:space-between; padding-bottom:1rem; border-bottom:1px solid var(--border-neutral);">
+        <div class="brand-text">
+          <span class="brand-name">TASTE SAFARI</span>
+          <span class="brand-sub">WITH RAJAT</span>
+        </div>
+        <button id="btn-mobile-nav-close" class="btn-icon" aria-label="Close menu">✕</button>
+      </div>
+
+      <ul class="mobile-nav-list">
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#adventures" class="mobile-nav-link">Adventures</a></li>
+        <li><a href="#collections" class="mobile-nav-link">Collections</a></li>
+        <li><a href="#videos" class="mobile-nav-link">Videos & Reels</a></li>
+        <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+        <li><a href="#about" class="mobile-nav-link">About Rajat</a></li>
+        <li><a href="#collaborations" class="mobile-nav-link">Collaborations</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+
+      <div style="margin-top:auto; display:flex; flex-direction:column; gap:0.75rem;">
+        <a href="#collaborations" class="btn btn-primary" style="width:100%;">Work Together</a>
+        <a href="https://www.instagram.com/taste_safari_/" target="_blank" rel="noopener noreferrer" class="btn btn-insta" style="width:100%; justify-content:center;">
+          <svg class="icon" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          <span>Instagram @taste_safari_</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         SECTION 03 — HOME / HERO SECTION
+         ========================================================================== -->
+    <section id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-kicker-strip">
+              <svg class="icon" viewBox="0 0 24 24" style="color:var(--accent);"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span>Cinematic Food-Travel Documentary · Bharatpur & Beyond</span>
+            </div>
+
+            <h1 class="hero-title">
+              Exploring The <span class="highlight">Untamed Flavours</span> & Hidden Culinary Legends
+            </h1>
+
+            <p class="hero-lead">
+              Join Rajat Punia on an unfiltered, cinematic journey through the historic lanes of Bharatpur. From 70-year-old street halwais and spicy bedmi puris to royal Braj heritage feasts and highway dhabas—discover the real food stories that define our culture.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#adventures" class="btn btn-primary">
+                <span>Explore Adventures</span>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+
+              <a href="#intro-section" class="btn btn-secondary" id="hero-watch-intro-btn">
+                <svg class="icon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <span>Watch Introduction</span>
+              </a>
+
+              <a href="https://www.instagram.com/taste_safari_/" target="_blank" rel="noopener noreferrer" class="btn btn-insta">
+                <svg class="icon" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                <span>@taste_safari_</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual-side">
+            <div class="hero-visual-card">
+              <img src="assets/images/rajat_thali_review.jpg" alt="Rajat Punia reviewing authentic Bharatpur thali feast" class="hero-visual-img" onerror="if(!this.dataset.retry){this.dataset.retry='1';this.src='public/assets/images/rajat_thali_review.jpg';}">
+              <div class="hero-scrim"></div>
+              <div class="hero-floating-badge">
+                <div>
+                  <div class="hero-badge-title">Rajat's Genuine Stamp</div>
+                  <div class="hero-badge-sub">100% Honest · Zero Paid Bias</div>
+                </div>
+                <div style="font-family:var(--font-display); font-size:1.6rem; font-weight:800; color:var(--accent);">
+                  80+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-stats-row">
+          <div class="stat-item">
+            <span class="stat-number">80+</span>
+            <span class="stat-label">Documented Food Spots</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Unfiltered Genuine Reviews</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">1M+</span>
+            <span class="stat-label">Digital Impressions</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">Braj</span>
+            <span class="stat-label">Heritage Culinary Heart</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 04 — INTRODUCTION / ABOUT PREVIEW
+         (Preserved specifically for the News18 Broadcast & Rajat's Introduction Video)
+         ========================================================================== -->
+    <section id="intro-section" class="section-padding">
+      <div class="container">
+        <div class="intro-grid">
+          <div class="intro-media-side">
+            <div class="video-player-container">
+              <span class="video-badge-overlay">Official Introduction · News18 Feature</span>
+              <video id="intro-video" class="video-element" playsinline controls preload="metadata" poster="assets/thumbnails/rajat_interview_news18.jpg">
+                <source src="assets/taste-safari-intro.mp4" type="video/mp4">
+                <source src="public/assets/taste-safari-intro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          <div class="intro-content-side">
+            <span class="section-kicker">The Voice Behind The Flavours</span>
+            <h2 class="section-title">From Student Politics to Uncovering Bharatpur’s Culinary Soul</h2>
+            
+            <p class="intro-story-p">
+              "People outside thought Bharatpur was only about roadside kachoris. But having grown up here, I knew our heritage ran much deeper—into 70-year-old halwai recipes, slow-cooked royal game curries, and generational dhabas that have fed travellers for decades."
+            </p>
+
+            <p class="intro-story-p">
+              After student elections were paused at MSJ College where Rajat was actively preparing for presidency, he refused to sit idle. He picked up his microphone, stepped into the bustling bazaars, and founded <strong>Taste Safari</strong>. Today, millions watch his honest reviews and cultural storytelling.
+            </p>
+
+            <div class="philosophy-card">
+              <div class="philosophy-title">
+                <svg class="icon" viewBox="0 0 24 24" style="color:var(--accent);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>The Taste Safari Creed</span>
+              </div>
+              <p class="philosophy-desc">
+                We never accept money to give false praise. If a dish is exceptional, we celebrate the hands that made it. If it isn't, we share constructive honesty. Taste Safari exists to document authentic heritage and support local culinary artisans.
+              </p>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:1rem; margin-top:0.75rem; flex-wrap:wrap;">
+              <a href="#about" class="btn btn-secondary">
+                <span>Discover Rajat's Full Story</span>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="https://www.youtube.com/@taste_safari" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                <svg class="icon" viewBox="0 0 24 24" style="color:#ef4444;"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9 10 15"/></svg>
+                <span>YouTube @taste_safari</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 05 — ADVENTURES (DISCOVERY PLATFORM)
+         ========================================================================== -->
+    <section id="adventures" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Interactive Food Discovery</span>
+          <h2 class="section-title">Curated Food Adventures</h2>
+          <p class="section-lead">
+            Every spot has been personally visited, taste-tested, and evaluated by Rajat. Filter by craving, location, or dietary preference to plan your next food safari.
+          </p>
+        </div>
+
+        <div class="adventures-controls-panel">
+          <div class="category-filter-tabs" id="category-tabs" role="tablist" aria-label="Adventure categories">
+            <button class="category-tab-btn active" data-category="all" role="tab">All Discoveries</button>
+          </div>
+
+          <div class="controls-secondary-row">
+            <div class="adventures-search-wrapper">
+              <svg class="icon adventures-search-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              <input type="text" id="adventures-search-input" class="adventures-search-input" placeholder="Search dish, vendor name or street...">
+            </div>
+
+            <div class="controls-actions-group">
+              <select id="adventures-sort" class="sort-select" aria-label="Sort adventures">
+                <option value="featured">Sort: Featured Picks</option>
+                <option value="rating">Highest Rated</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+              </select>
+
+              <button id="btn-surprise-me" class="btn btn-secondary" title="Random discovery">
+                <svg class="icon" viewBox="0 0 24 24"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72Z"/><path d="m14 7 3 3"/><path d="M5 6v4"/><path d="M19 14v4"/><path d="M10 2v2"/><path d="M7 8H3"/><path d="M21 16h-4"/><path d="M11 3H9"/></svg>
+                <span>Surprise Me</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="adventures-grid" class="adventures-grid">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Adventure Detail Modal -->
+    <div id="adventure-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Adventure Details">
+      <div class="adventure-detail-modal">
+        <button id="btn-detail-modal-close" class="modal-close-btn" aria-label="Close details">✕</button>
+        <div class="modal-hero-media">
+          <img id="modal-detail-img" src="" alt="" class="modal-hero-img">
+          <span id="modal-detail-cat" class="card-category-tag" style="bottom:1.5rem; left:1.5rem;">Category</span>
+        </div>
+        <div class="modal-body-padding">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:0.75rem; flex-wrap:wrap;">
+            <div id="modal-detail-location" style="color:var(--accent); font-weight:700; font-size:0.875rem;">Location</div>
+            <div id="modal-detail-score" style="font-family:var(--font-display); font-size:1.15rem; font-weight:800; color:var(--accent);">Score: 9.6/10</div>
+          </div>
+          
+          <h2 id="modal-detail-title" style="font-size:2rem; margin-bottom:1rem;">Title</h2>
+          
+          <p id="modal-detail-desc" style="color:var(--text-muted); font-size:1.05rem; line-height:1.7; margin-bottom:1.75rem;">Description</p>
+          
+          <div style="background:var(--bg-elevated); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:1.25rem; margin-bottom:1.75rem;">
+            <div style="font-weight:700; color:var(--text-heading); margin-bottom:0.4rem;">Rajat's Tasting Notes & Recommendation</div>
+            <p id="modal-detail-notes" style="font-size:0.9375rem; color:var(--text-muted); line-height:1.6;">Tasting notes</p>
+          </div>
+
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:1rem; margin-bottom:2rem;">
+            <div style="background:var(--bg-elevated); padding:1rem; border-radius:var(--radius-md); border:1px solid var(--border-neutral);">
+              <div style="font-size:0.75rem; color:var(--text-dim); text-transform:uppercase; font-weight:700;">Price Range</div>
+              <div id="modal-detail-price" style="font-weight:700; color:var(--text-heading); font-size:1.1rem; margin-top:0.25rem;">₹40 - ₹120</div>
+            </div>
+            <div style="background:var(--bg-elevated); padding:1rem; border-radius:var(--radius-md); border:1px solid var(--border-neutral);">
+              <div style="font-size:0.75rem; color:var(--text-dim); text-transform:uppercase; font-weight:700;">Best Visiting Time</div>
+              <div id="modal-detail-time" style="font-weight:700; color:var(--text-heading); font-size:1.1rem; margin-top:0.25rem;">7:00 AM - 11:30 AM</div>
+            </div>
+            <div style="background:var(--bg-elevated); padding:1rem; border-radius:var(--radius-md); border:1px solid var(--border-neutral);">
+              <div style="font-size:0.75rem; color:var(--text-dim); text-transform:uppercase; font-weight:700;">Dietary Type</div>
+              <div id="modal-detail-diet" style="font-weight:700; color:var(--text-heading); font-size:1.1rem; margin-top:0.25rem;">100% Pure Vegetarian</div>
+            </div>
+          </div>
+
+          <!-- Highlighted Instagram Reel Link in Product Details -->
+          <div style="background:linear-gradient(135deg, rgba(131, 58, 180, 0.12) 0%, rgba(253, 29, 29, 0.12) 50%, rgba(252, 176, 69, 0.12) 100%); border:1px solid rgba(253, 29, 29, 0.35); border-radius:var(--radius-md); padding:1.25rem; margin-bottom:2rem; display:flex; align-items:center; justify-content:space-between; gap:1.25rem; flex-wrap:wrap;">
+            <div style="display:flex; align-items:center; gap:0.85rem;">
+              <div style="width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); display:flex; align-items:center; justify-content:center; color:#fff; flex-shrink:0;">
+                <svg class="icon" viewBox="0 0 24 24" style="stroke:#fff;"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </div>
+              <div>
+                <div style="font-weight:700; color:#fff; font-size:1rem;">Watch This Spot on Taste Safari Instagram</div>
+                <div style="font-size:0.8125rem; color:#d6d3d1;">Watch Rajat's on-camera tasting reaction and full review reel</div>
+              </div>
+            </div>
+            <a id="modal-detail-insta-link" href="https://www.instagram.com/taste_safari_/reels/" target="_blank" rel="noopener noreferrer" class="btn btn-insta">
+              <span>Watch Reel on @taste_safari_</span>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
+
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; padding-top:1.25rem; border-top:1px solid var(--border-neutral);">
+            <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+              <button id="modal-detail-fav-btn" class="btn btn-secondary">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                <span id="modal-detail-fav-text">Save to Favourites</span>
+              </button>
+              <button id="modal-detail-share-btn" class="btn btn-primary">
+                <svg class="icon" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+                <span>Share Spot</span>
+              </button>
+            </div>
+            <a href="#contact" class="btn btn-outline" onclick="document.getElementById('adventure-modal').classList.remove('open');">Suggest Correction</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHARE SPOT CUSTOM MODAL -->
+    <div id="share-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Share Food Spot">
+      <div class="share-modal-box">
+        <button id="btn-share-modal-close" class="modal-close-btn" aria-label="Close share modal">✕</button>
+        <span class="section-kicker">Spread The Flavours</span>
+        <h3 id="share-modal-title" style="font-size:1.5rem; margin-bottom:0.5rem;">Share Spot</h3>
+        <p id="share-modal-sub" style="color:var(--text-muted); font-size:0.875rem;">Send this recommendation to fellow food explorers.</p>
+
+        <div class="share-options-grid">
+          <button id="share-opt-native" class="share-btn-tile">
+            <svg class="icon" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+            <span>Device Share</span>
+          </button>
+          <a id="share-opt-whatsapp" href="#" target="_blank" rel="noopener noreferrer" class="share-btn-tile">
+            <svg class="icon" viewBox="0 0 24 24" style="color:#25d366;"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            <span>WhatsApp</span>
+          </a>
+          <a id="share-opt-telegram" href="#" target="_blank" rel="noopener noreferrer" class="share-btn-tile">
+            <svg class="icon" viewBox="0 0 24 24" style="color:#229ed9;"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+            <span>Telegram</span>
+          </a>
+          <a id="share-opt-x" href="#" target="_blank" rel="noopener noreferrer" class="share-btn-tile">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M4 4l16 16M4 20 20 4"/></svg>
+            <span>X (Twitter)</span>
+          </a>
+          <a id="share-opt-facebook" href="#" target="_blank" rel="noopener noreferrer" class="share-btn-tile">
+            <svg class="icon" viewBox="0 0 24 24" style="color:#1877f2;"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <span>Facebook</span>
+          </a>
+          <button id="share-opt-copy" class="share-btn-tile">
+            <svg class="icon" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            <span>Copy Link</span>
+          </button>
+        </div>
+
+        <div class="share-copy-box">
+          <input type="text" id="share-link-input" class="share-link-input" readonly>
+          <button id="btn-copy-share-url" class="btn btn-secondary" style="padding:0.4rem 0.85rem; font-size:0.8125rem;">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+       SECTION 06 — COLLECTIONS
+       ========================================================================== -->
+    <section id="collections" class="section-padding">
+      <div class="container">
+        <div class="collections-nav-bar">
+          <div class="collection-tabs">
+            <div id="tab-favs" class="collection-tab-link active" data-collection-tab="favs">
+              <span>Saved Favourites</span>
+              <span id="fav-count-badge" class="tab-badge">0</span>
+            </div>
+            <div id="tab-recent" class="collection-tab-link" data-collection-tab="recent">
+              <span>Recently Viewed</span>
+              <span id="recent-count-badge" class="tab-badge">0</span>
+            </div>
+          </div>
+          <button id="btn-clear-collection" class="btn btn-outline" style="font-size:0.8125rem; padding:0.4rem 0.9rem;">
+            Clear History
+          </button>
+        </div>
+
+        <div id="collections-grid" class="adventures-grid">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 07 — VIDEOS AND INSTAGRAM REELS
+       (Dedicated authentic culinary cooking videos — NO intro video here)
+       ========================================================================== -->
+    <section id="videos" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Watch The Journey</span>
+          <h2 class="section-title">Episodes & Instagram Reels</h2>
+          <p class="section-lead">
+            Experience the sizzle, the smoke, and the authentic culinary traditions. Watch our featured food episodes and trending Instagram Reels from @taste_safari_.
+          </p>
+        </div>
+
+        <div class="video-bento-grid"></div>
+
+        <!-- Trending Instagram Reels Section from @taste_safari_ -->
+        <div class="reels-section-title">
+          <span style="font-family:var(--font-display); font-size:1.75rem; color:var(--text-heading);">Trending Reels from @taste_safari_</span>
+          <a href="https://www.instagram.com/taste_safari_/" target="_blank" rel="noopener noreferrer" class="btn btn-insta" style="font-size:0.8125rem;">
+            <span>Follow @taste_safari_ on Instagram</span>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+          </a>
+        </div>
+
+        <div class="reels-grid"></div>
+      </div>
+    </section>
+
+    <!-- Theatre Video Player Modal -->
+    <div id="theatre-video-modal" role="dialog" aria-modal="true" aria-label="Culinary Video Player">
+      <div class="theatre-box">
+        <div style="display:flex; align-items:center; justify-content:space-between;">
+          <h3 id="theatre-title" style="color:#fff; font-size:1.25rem;">Episode Title</h3>
+          <button id="btn-theatre-close" class="modal-close-btn" style="position:static;" aria-label="Close player">✕</button>
+        </div>
+        <div class="theatre-video-wrap">
+          <video id="theatre-video" controls playsinline></video>
+        </div>
+        <div class="theatre-meta-strip">
+          <span style="font-size:0.875rem; color:#d6d3d1;">Taste Safari with Rajat · Authentic Food Journey</span>
+          <a href="https://www.youtube.com/@taste_safari" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size:0.8125rem; padding:0.4rem 0.85rem;">
+            <span>Subscribe on YouTube @taste_safari</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+       SECTION 08 — GALLERY (MASONRY & CUSTOM LIGHTBOX)
+       (Dedicated authentic culinary food photography — NO intro video here)
+       ========================================================================== */
+    -->
+    <section id="gallery" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Visual Chronicles</span>
+          <h2 class="section-title">Editorial Food & Culinary Gallery</h2>
+          <p class="section-lead">
+            An intimate photography archive capturing sizzling woks, aromatic saffron kettles, crackled baatis, and the rich culinary heritage of Braj. Click any photograph for fullscreen viewing.
+          </p>
+        </div>
+
+        <div class="gallery-masonry-grid" id="gallery-grid">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Fullscreen Gallery Viewer">
+      <button id="btn-lightbox-close" class="modal-close-btn" aria-label="Close lightbox">✕</button>
+      <button id="btn-lightbox-prev" class="lightbox-nav-btn lightbox-prev" aria-label="Previous image">
+        <svg class="icon" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <div class="lightbox-wrapper">
+        <img id="lightbox-img" src="" alt="" class="lightbox-main-img">
+        <div class="lightbox-caption-box">
+          <h4 id="lightbox-title" style="font-family:var(--font-display); font-size:1.3rem; color:#fff;">Title</h4>
+          <p id="lightbox-caption" style="color:#d6d3d1; font-size:0.9375rem; margin-top:0.25rem;">Caption</p>
+          <div id="lightbox-counter" style="color:var(--accent); font-size:0.8125rem; font-weight:700; margin-top:0.5rem;">1 of 8</div>
+        </div>
+      </div>
+      <button id="btn-lightbox-next" class="lightbox-nav-btn lightbox-next" aria-label="Next image">
+        <svg class="icon" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
+
+    <!-- ==========================================================================
+       SECTION 09 — FULL ABOUT SECTION
+       ========================================================================== -->
+    <section id="about" class="section-padding">
+      <div class="container">
+        <div class="about-main-grid">
+          <div class="about-image-stack">
+            <div class="about-primary-card">
+              <img src="assets/images/rajat_authentic_story.jpg" alt="Rajat Punia on his food-travel safari in Rajasthan" style="width:100%; height:100%; object-fit:cover;" onerror="if(!this.dataset.retry){this.dataset.retry='1';this.src='public/assets/images/rajat_authentic_story.jpg';}">
+            </div>
+            <div class="about-logo-stamp">
+              <img src="assets/taste-safari-logo.png" alt="Official Taste Safari with Rajat Logo" onerror="if(!this.dataset.retry){this.dataset.retry='1';this.src='public/assets/taste-safari-logo.png';}">
+            </div>
+          </div>
+
+          <div class="about-bio-text">
+            <span class="section-kicker">Meet The Creator</span>
+            <h2 class="section-title">Rajat Punia</h2>
+            
+            <p class="about-bio-p">
+              Born and raised in Bharatpur, Rajasthan, Rajat was deeply involved in youth leadership and campus advocacy at MSJ College—the preeminent collegiate institution of the division. When regional student union elections were indefinitely postponed, he channeled his public speaking talent, curiosity, and love for his homeland into documenting its untold culinary heritage.
+            </p>
+
+            <p class="about-bio-p">
+              Bharatpur occupies a unique cultural crossroads where Rajasthani royal culinary finesse converges with Braj's sacred milk-sweet traditions and Uttar Pradesh's pungent mustard-heeng street food. Rajat recognized that while big cities get endless media coverage, the multigenerational artisans of Bharatpur were going unnoticed.
+            </p>
+
+            <div class="about-pillars-grid">
+              <div class="pillar-box">
+                <div class="pillar-num">01. CULTURAL CONTEXT</div>
+                <div class="pillar-title">Beyond Just Taste</div>
+                <div class="pillar-desc">Explaining the origin of spices, water quality, and recipes passed through 3 generations.</div>
+              </div>
+              <div class="pillar-box">
+                <div class="pillar-num">02. ARTISAN FOCUS</div>
+                <div class="pillar-title">Celebrating The Hands</div>
+                <div class="pillar-desc">Giving voice to street vendors and legacy cooks who rise at 4 AM to feed the city.</div>
+              </div>
+              <div class="pillar-box">
+                <div class="pillar-num">03. 100% UNFILTERED</div>
+                <div class="pillar-title">Authentic Reviews</div>
+                <div class="pillar-desc">Zero paid scripts. If a place fails on hygiene or taste, it is never recommended.</div>
+              </div>
+              <div class="pillar-box">
+                <div class="pillar-num">04. YOUTH ADVOCACY</div>
+                <div class="pillar-title">Local Pride</div>
+                <div class="pillar-desc">Inspiring Bharatpur youth to cherish local heritage and build homegrown entrepreneurship.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 10 — COLLABORATIONS
+       ========================================================================== -->
+    <section id="collaborations" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Professional Partnerships</span>
+          <h2 class="section-title">Collaborate With Taste Safari</h2>
+          <p class="section-lead">
+            We partner with passionate restaurateurs, artisan food producers, regional tourism initiatives, and heritage hospitality brands who value authenticity and high-quality visual storytelling.
+          </p>
+        </div>
+
+        <div class="collab-cards-grid">
+          <div class="collab-card">
+            <div class="collab-icon-box">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/><circle cx="12" cy="12" r="9"/></svg>
+            </div>
+            <h3 class="collab-card-title">Restaurant & Dhaba Spotlights</h3>
+            <p class="collab-card-desc">
+              Cinematic in-depth documentary video features showcasing your signature recipes, kitchen craftsmanship, and culinary history.
+            </p>
+            <ul class="collab-points-list">
+              <li class="collab-point-item">✓ Dedicated 4K Documentary Episode</li>
+              <li class="collab-point-item">✓ 2 High-Engagement Instagram Reels</li>
+              <li class="collab-point-item">✓ Permanent Spot on Taste Safari Directory</li>
+            </ul>
+          </div>
+
+          <div class="collab-card">
+            <div class="collab-icon-box">
+              <svg class="icon" viewBox="0 0 24 24"><path d="m12 2-5.5 9h11z"/><circle cx="12" cy="17" r="5"/></svg>
+            </div>
+            <h3 class="collab-card-title">Food & Beverage Brands</h3>
+            <p class="collab-card-desc">
+              Organic product integrations with pure desi ghee producers, traditional spice grinders, cookware makers, and regional beverage brands.
+            </p>
+            <ul class="collab-points-list">
+              <li class="collab-point-item">✓ Real Recipe Culinary Showcase</li>
+              <li class="collab-point-item">✓ Honest Taste-Testing on Camera</li>
+              <li class="collab-point-item">✓ Multi-Platform Social Distribution</li>
+            </ul>
+          </div>
+
+          <div class="collab-card">
+            <div class="collab-icon-box">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3 class="collab-card-title">Heritage & Tourism Boards</h3>
+            <p class="collab-card-desc">
+              Curated regional culinary trails, district food festival coverage, and cultural tourism campaigns bringing tourists to authentic eateries.
+            </p>
+            <ul class="collab-points-list">
+              <li class="collab-point-item">✓ Multi-Day City Food Safari</li>
+              <li class="collab-point-item">✓ Historical & Architectural Context</li>
+              <li class="collab-point-item">✓ Official Tourism Promotion Asset</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="collab-banner-box">
+          <div>
+            <h4 style="font-family:var(--font-display); font-size:1.5rem; margin-bottom:0.35rem; color:var(--text-heading);">
+              Ready to feature your kitchen on Taste Safari?
+            </h4>
+            <p style="color:var(--text-muted); font-size:0.95rem;">
+              Reach out today to discuss collaboration dates, production scope, and deliverables.
+            </p>
+          </div>
+          <a href="#contact" class="btn btn-primary" onclick="selectInquiryType('Brand Collaboration');">
+            <span>Inquire Now</span>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 11 — CONTACT
+       ========================================================================== -->
+    <section id="contact" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Direct Connection</span>
+          <h2 class="section-title">Get In Touch With Rajat</h2>
+          <p class="section-lead">
+            Have a secret street food spot we must review? Want to propose a brand collaboration or media appearance? Drop us a line.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-side">
+            <div class="contact-info-card">
+              <div class="contact-info-icon">
+                <svg class="icon" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div>
+                <div class="contact-info-label">Official Email</div>
+                <div class="contact-info-val"><a href="mailto:rc9294932@gmail.com" style="color:var(--text-heading); text-decoration:none;">rc9294932@gmail.com</a></div>
+                <div style="font-size:0.8125rem; color:var(--text-dim); margin-top:0.25rem;">For partnerships, collaborations &amp; inquiries</div>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-info-icon">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="contact-info-label">Phone &amp; WhatsApp</div>
+                <div class="contact-info-val"><a href="tel:+917023332362" style="color:var(--text-heading); text-decoration:none;">+91 7023332362</a></div>
+                <div style="font-size:0.8125rem; color:var(--text-dim); margin-top:0.25rem;">Direct calls &amp; WhatsApp chat</div>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-info-icon">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="contact-info-label">Base Location</div>
+                <div class="contact-info-val">Bharatpur, Rajasthan, India</div>
+                <div style="font-size:0.8125rem; color:var(--text-dim); margin-top:0.25rem;">Travelling across Braj & North India</div>
+              </div>
+            </div>
+
+            <div style="background:var(--bg-elevated); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:1.25rem;">
+              <div style="font-weight:700; color:var(--text-heading); font-size:0.9375rem; margin-bottom:0.25rem;">Editorial Independence Notice</div>
+              <p style="font-size:0.8125rem; color:var(--text-muted); line-height:1.5;">
+                Taste Safari does not publish paid ratings. Submitting a recommendation does not guarantee a feature—every spot is vetted for authentic flavor and quality.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-form-card">
+            <form id="safari-contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Full Name *</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Vikram Sharma" required>
+                <div class="form-error-msg" id="err-name">Please enter your name (at least 2 characters).</div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address *</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="e.g. vikram@tastesafari.com" required>
+                <div class="form-error-msg" id="err-email">Please enter a valid email address.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-phone" class="form-label">Phone Number *</label>
+                <input type="tel" id="contact-phone" class="form-input" placeholder="e.g. +91 98765 43210" required>
+                <div class="form-error-msg" id="err-phone">Please enter a valid phone number.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-entity" class="form-label">Restaurant / Organization (Optional)</label>
+                <input type="text" id="contact-entity" class="form-input" placeholder="e.g. Mahaveer Sweets or Self">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-type" class="form-label">Inquiry Category *</label>
+                <select id="contact-type" class="form-select" required>
+                  <option value="Street Food Recommendation">Street Food / Hidden Gem Recommendation</option>
+                  <option value="Restaurant Feature">Restaurant / Dhaba Feature Request</option>
+                  <option value="Brand Collaboration">Brand Collaboration or Sponsorship</option>
+                  <option value="Media & Press">Media, Interview or Press Inquiry</option>
+                  <option value="General Hello">General Message for Rajat</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-msg" class="form-label">Message & Recommendation Details *</label>
+                <textarea id="contact-msg" class="form-textarea" placeholder="Tell us about the dish, why it is special, vendor location, or collaboration scope..." required></textarea>
+                <div class="form-char-counter"><span id="msg-char-count">0</span> / 600 characters</div>
+                <div class="form-error-msg" id="err-msg">Please write at least 10 characters.</div>
+              </div>
+
+              <div class="form-checkbox-row">
+                <input type="checkbox" id="contact-consent" required>
+                <label for="contact-consent" class="form-checkbox-label">
+                  I understand that Taste Safari maintains 100% editorial honesty and will review food on its genuine merit.
+                </label>
+              </div>
+              <div class="form-error-msg" id="err-consent" style="margin-top:-1rem; margin-bottom:1rem;">Please accept this guideline before submitting.</div>
+
+              <div style="display:flex; flex-direction:column; gap:0.85rem;">
+                <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                  <span>Send</span>
+                </button>
+
+                <button type="button" id="btn-whatsapp-direct" class="btn btn-secondary" style="width:100%; justify-content:center;">
+                  <svg class="icon" viewBox="0 0 24 24" style="color:#25d366;"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                  <span>Or Message Directly on WhatsApp</span>
+                </button>
+              </div>
+
+              <p style="font-size:0.75rem; color:var(--text-dim); text-align:center; margin-top:1rem;">
+                Your enquiry will be sent securely to the Taste Safari team.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SECTION 12 — INSTAGRAM AND FOOTER
+       ========================================================================== -->
+  <footer id="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-box">
+          <div class="footer-logo-row">
+            <img src="assets/taste-safari-logo.png" alt="Taste Safari Logo" style="width:48px; height:48px; object-fit:contain; border-radius:50%;" onerror="if(!this.dataset.retry){this.dataset.retry='1';this.src='public/assets/taste-safari-logo.png';}">
+            <div class="brand-text">
+              <span class="brand-name" style="color:#fff;">TASTE SAFARI</span>
+              <span class="brand-sub">WITH RAJAT</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            A premier food-travel brand and documentary platform capturing Bharatpur's authentic culinary heritage, generational halwais, and regional flavours.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://www.instagram.com/taste_safari_/" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Taste Safari on Instagram (@taste_safari_)">
+              <svg class="icon" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@taste_safari" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Taste Safari on YouTube (@taste_safari)">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9 10 15"/></svg>
+            </a>
+            <a href="https://wa.me/917023332362" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="WhatsApp Channel (+91 7023332362)">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#adventures">All Adventures</a></li>
+            <li><a href="#collections">Your Collections</a></li>
+            <li><a href="#videos">Videos & Reels</a></li>
+            <li><a href="#gallery">Food Gallery</a></li>
+            <li><a href="#about">About Rajat</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Discoveries</h4>
+          <ul class="footer-links-list">
+            <li><a href="#adventures" onclick="filterByCategory('street');">Street Food Legends</a></li>
+            <li><a href="#adventures" onclick="filterByCategory('heritage');">Royal Laal Maas & Dhabas</a></li>
+            <li><a href="#adventures" onclick="filterByCategory('cafes');">Courtyard Bistros & Cafés</a></li>
+            <li><a href="#adventures" onclick="filterByCategory('local');">Halwai Sweets & Rabdi</a></li>
+            <li><a href="#adventures" onclick="filterByCategory('hidden');">Night Safari Quests</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Official Channels</h4>
+          <ul class="footer-links-list">
+            <li><a href="https://www.instagram.com/taste_safari_/" target="_blank" rel="noopener noreferrer">Instagram (@taste_safari_)</a></li>
+            <li><a href="https://www.youtube.com/@taste_safari" target="_blank" rel="noopener noreferrer">YouTube (@taste_safari)</a></li>
+            <li><a href="tel:+917023332362">Direct Call: +91 7023332362</a></li>
+            <li><a href="https://wa.me/917023332362" target="_blank" rel="noopener noreferrer">WhatsApp: +91 7023332362</a></li>
+            <li><a href="mailto:rc9294932@gmail.com">Email: rc9294932@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-strip">
+        <div>
+          © 2026 Taste Safari with Rajat. All rights reserved. Official Channels: @taste_safari_ on Instagram · @taste_safari on YouTube.
+        </div>
+        <button id="btn-back-to-top" class="back-to-top-btn" aria-label="Scroll back to top">
+          <span>Back to Top</span>
+          <svg class="icon" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Box -->
+  <div id="toast-notification" role="status" aria-live="polite">
+    <svg class="icon" viewBox="0 0 24 24" style="color:var(--accent);"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+    <span id="toast-text">Notification message</span>
+  </div>
+
+  <script>
+    window.__tasteSafariBootstrap = fetch('/api/public/content').then(response => response.ok ? response.json() : null).catch(() => null);
+  </script>
+  <!-- ==========================================================================
+       SECTION 13 — VANILLA JAVASCRIPT MASTER SCRIPT (100% PURE JS)
+       ========================================================================== -->
+  <script>
+    /**
+     * @license
+     * TASTE SAFARI WITH RAJAT — MASTER CLIENT SCRIPT
+     * Pure Vanilla JavaScript (ES2022) · Zero External Dependencies
+     * Official Instagram: @taste_safari_
+     * Official YouTube: @taste_safari
+     */
+
+    (function () {
+      "use strict";
+
+      /* ==========================================================================
+         CONTENT DATA ARCHITECTURE
+         ========================================================================== */
+      
+      const adventureData = [];
+
+      // Portrait culinary food photography archive (strictly zero intro-video frames)
+      const galleryData = [];
+
+      /* ==========================================================================
+         APPLICATION STATE & LOCAL STORAGE
+         ========================================================================== */
+      
+      const STORAGE_KEYS = {
+        THEME: "taste_safari_theme",
+        FONT_SIZE: "taste_safari_font_size",
+        MOTION: "taste_safari_motion",
+        SOUND: "taste_safari_sound",
+        FAVOURITES: "taste_safari_favourites_v2",
+        RECENTLY_VIEWED: "taste_safari_recent_v2",
+        INTRO_SEEN: "taste_safari_intro_seen_session"
+      };
+
+      let state = {
+        theme: localStorage.getItem(STORAGE_KEYS.THEME) || "dark",
+        fontSize: localStorage.getItem(STORAGE_KEYS.FONT_SIZE) || "default",
+        motion: localStorage.getItem(STORAGE_KEYS.MOTION) || "normal",
+        sound: localStorage.getItem(STORAGE_KEYS.SOUND) || "enabled",
+        favourites: JSON.parse(localStorage.getItem(STORAGE_KEYS.FAVOURITES) || "[]"),
+        recentlyViewed: JSON.parse(localStorage.getItem(STORAGE_KEYS.RECENTLY_VIEWED) || "[]"),
+        activeCategory: "all",
+        activeCollectionTab: "favs",
+        currentLightboxIndex: 0,
+        currentAdventureForShare: null
+      };
+
+      const escapeHtml = value => String(value ?? "").replace(/[&<>"']/g, ch => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }[ch]));
+
+      /* ==========================================================================
+         AUDIO SYNTHESIS ENGINE
+         ========================================================================== */
+      let audioCtx = null;
+      function playFeedbackSound(type) {
+        if (state.sound !== "enabled") return;
+        try {
+          if (!audioCtx) {
+            const AudioContext = window.AudioContext || window.webkitAudioContext;
+            audioCtx = new AudioContext();
+          }
+          if (audioCtx.state === "suspended") {
+            audioCtx.resume();
+          }
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          const now = audioCtx.currentTime;
+
+          if (type === "click") {
+            osc.type = "sine";
+            osc.frequency.setValueAtTime(650, now);
+            osc.frequency.exponentialRampToValueAtTime(850, now + 0.05);
+            gain.gain.setValueAtTime(0.06, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
+            osc.start(now);
+            osc.stop(now + 0.05);
+          } else if (type === "success") {
+            osc.type = "triangle";
+            osc.frequency.setValueAtTime(523.25, now);
+            osc.frequency.setValueAtTime(659.25, now + 0.08);
+            osc.frequency.setValueAtTime(783.99, now + 0.16);
+            gain.gain.setValueAtTime(0.08, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+            osc.start(now);
+            osc.stop(now + 0.35);
+          } else if (type === "surprise") {
+            osc.type = "sine";
+            osc.frequency.setValueAtTime(440, now);
+            osc.frequency.exponentialRampToValueAtTime(880, now + 0.2);
+            gain.gain.setValueAtTime(0.09, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.25);
+            osc.start(now);
+            osc.stop(now + 0.25);
+          }
+        } catch (e) {}
+      }
+
+      /* ==========================================================================
+         TOAST NOTIFICATION
+         ========================================================================== */
+      let toastTimer = null;
+      function showToast(message) {
+        const toast = document.getElementById("toast-notification");
+        const text = document.getElementById("toast-text");
+        if (!toast || !text) return;
+        text.textContent = message;
+        toast.classList.add("show");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          toast.classList.remove("show");
+        }, 3200);
+      }
+
+      /* ==========================================================================
+         SECTION 01: OPENING SCREEN
+         ========================================================================== */
+      function initOpeningScreen() {
+        const opening = document.getElementById("opening-screen");
+        const progressFill = document.getElementById("opening-progress");
+        const enterBtn = document.getElementById("btn-enter-site");
+        const skipBtn = document.getElementById("btn-skip-intro");
+
+        if (!opening) return;
+
+        const hasSeenIntro = sessionStorage.getItem(STORAGE_KEYS.INTRO_SEEN);
+        if (hasSeenIntro === "true") {
+          opening.classList.add("hidden");
+          return;
+        }
+
+        let progress = 0;
+        const interval = setInterval(() => {
+          progress += 5;
+          if (progressFill) progressFill.style.width = progress + "%";
+          if (progress >= 100) clearInterval(interval);
+        }, 70);
+
+        function closeOpening() {
+          playFeedbackSound("click");
+          opening.classList.add("hidden");
+          sessionStorage.setItem(STORAGE_KEYS.INTRO_SEEN, "true");
+        }
+
+        if (enterBtn) enterBtn.addEventListener("click", closeOpening);
+        if (skipBtn) skipBtn.addEventListener("click", closeOpening);
+      }
+
+      /* ==========================================================================
+         SECTION 02: NAVIGATION & SCROLL
+         ========================================================================== */
+      function initNavigation() {
+        const navLinks = document.querySelectorAll(".nav-item-link");
+        const sections = document.querySelectorAll("main section");
+
+        window.addEventListener("scroll", () => {
+          let currentSectionId = "";
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 120;
+            const sectionHeight = section.offsetHeight;
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+              currentSectionId = section.getAttribute("id");
+            }
+          });
+
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === "#" + currentSectionId) {
+              link.classList.add("active");
+            }
+          });
+        }, { passive: true });
+
+        const hamburgerBtn = document.getElementById("btn-hamburger");
+        const mobileNavClose = document.getElementById("btn-mobile-nav-close");
+        const mobileNavOverlay = document.getElementById("mobile-nav-overlay");
+        const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+
+        function openMobileMenu() {
+          playFeedbackSound("click");
+          if (mobileNavOverlay) mobileNavOverlay.classList.add("open", "menu-open");
+        }
+
+        function closeMobileMenu() {
+          if (mobileNavOverlay) mobileNavOverlay.classList.remove("open", "menu-open");
+        }
+
+        if (hamburgerBtn) hamburgerBtn.addEventListener("click", openMobileMenu);
+        if (mobileNavClose) mobileNavClose.addEventListener("click", closeMobileMenu);
+        if (mobileNavOverlay) {
+          mobileNavOverlay.addEventListener("click", (e) => {
+            if (e.target === mobileNavOverlay) closeMobileMenu();
+          });
+        }
+        mobileLinks.forEach(link => link.addEventListener("click", closeMobileMenu));
+
+        const backToTop = document.getElementById("btn-back-to-top");
+        if (backToTop) {
+          backToTop.addEventListener("click", () => {
+            playFeedbackSound("click");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+        }
+
+        const heroWatchBtn = document.getElementById("hero-watch-intro-btn");
+        if (heroWatchBtn) {
+          heroWatchBtn.addEventListener("click", () => {
+            const video = document.getElementById("intro-video");
+            if (video) {
+              setTimeout(() => {
+                video.play().catch(() => {});
+              }, 400);
+            }
+          });
+        }
+      }
+
+      /* ==========================================================================
+         SETTINGS PANEL
+         ========================================================================== */
+      function initSettings() {
+        const toggleBtn = document.getElementById("btn-settings-toggle");
+        const overlay = document.getElementById("settings-drawer-overlay");
+        const closeBtn = document.getElementById("btn-settings-close");
+        const replayIntroBtn = document.getElementById("btn-re-experience-intro");
+        const resetBtn = document.getElementById("btn-reset-settings");
+
+        function applyTheme(theme) {
+          document.documentElement.setAttribute("data-theme", theme);
+          state.theme = theme;
+          localStorage.setItem(STORAGE_KEYS.THEME, theme);
+          document.querySelectorAll("[data-theme-val]").forEach(btn => {
+            btn.classList.toggle("active", btn.getAttribute("data-theme-val") === theme);
+          });
+        }
+
+        function applyFontSize(size) {
+          document.documentElement.setAttribute("data-font-size", size);
+          state.fontSize = size;
+          localStorage.setItem(STORAGE_KEYS.FONT_SIZE, size);
+          document.querySelectorAll("[data-font-val]").forEach(btn => {
+            btn.classList.toggle("active", btn.getAttribute("data-font-val") === size);
+          });
+        }
+
+        function applyMotion(motion) {
+          if (motion === "reduced") {
+            document.documentElement.classList.add("reduced-motion");
+          } else {
+            document.documentElement.classList.remove("reduced-motion");
+          }
+          state.motion = motion;
+          localStorage.setItem(STORAGE_KEYS.MOTION, motion);
+          document.querySelectorAll("[data-motion-val]").forEach(btn => {
+            btn.classList.toggle("active", btn.getAttribute("data-motion-val") === motion);
+          });
+        }
+
+        function applySound(sound) {
+          state.sound = sound;
+          localStorage.setItem(STORAGE_KEYS.SOUND, sound);
+          document.querySelectorAll("[data-sound-val]").forEach(btn => {
+            btn.classList.toggle("active", btn.getAttribute("data-sound-val") === sound);
+          });
+        }
+
+        applyTheme(state.theme);
+        applyFontSize(state.fontSize);
+        applyMotion(state.motion);
+        applySound(state.sound);
+
+        if (toggleBtn) {
+          toggleBtn.addEventListener("click", () => {
+            playFeedbackSound("click");
+            overlay.classList.add("open");
+          });
+        }
+        if (closeBtn) {
+          closeBtn.addEventListener("click", () => {
+            playFeedbackSound("click");
+            overlay.classList.remove("open");
+          });
+        }
+        if (overlay) {
+          overlay.addEventListener("click", (e) => {
+            if (e.target === overlay) overlay.classList.remove("open");
+          });
+        }
+
+        document.querySelectorAll("[data-theme-val]").forEach(btn => {
+          btn.addEventListener("click", () => {
+            playFeedbackSound("click");
+            applyTheme(btn.getAttribute("data-theme-val"));
+            showToast(`Theme changed to ${btn.getAttribute("data-theme-val")} mode`);
+          });
+        });
+
+        document.querySelectorAll("[data-font-val]").forEach(btn => {
+          btn.addEventListener("click", () => {
+            playFeedbackSound("click");
+            applyFontSize(btn.getAttribute("data-font-val"));
+            showToast("Font size adjusted");
+          });
+        });
+
+        document.querySelectorAll("[data-motion-val]").forEach(btn => {
+          btn.addEventListener("click", () => {
+            playFeedbackSound("click");
+            applyMotion(btn.getAttribute("data-motion-val"));
+            showToast(`Motion set to ${btn.getAttribute("data-motion-val")}`);
+          });
+        });
+
+        document.querySelectorAll("[data-sound-val]").forEach(btn => {
+          btn.addEventListener("click", () => {
+            applySound(btn.getAttribute("data-sound-val"));
+            playFeedbackSound("click");
+            showToast(`Sounds ${btn.getAttribute("data-sound-val")}`);
+          });
+        });
+
+        if (replayIntroBtn) {
+          replayIntroBtn.addEventListener("click", () => {
+            playFeedbackSound("click");
+            overlay.classList.remove("open");
+            const opening = document.getElementById("opening-screen");
+            if (opening) {
+              opening.classList.remove("hidden");
+              const fill = document.getElementById("opening-progress");
+              if (fill) fill.style.width = "100%";
+            }
+          });
+        }
+
+        if (resetBtn) {
+          resetBtn.addEventListener("click", () => {
+            playFeedbackSound("click");
+            applyTheme("dark");
+            applyFontSize("default");
+            applyMotion("normal");
+            applySound("enabled");
+            showToast("Settings reset to defaults");
+          });
+        }
+      }
+
+      /* ==========================================================================
+         GLOBAL SEARCH
+         ========================================================================== */
+      function initSearch() {
+        const toggleBtn = document.getElementById("btn-search-toggle");
+        const overlay = document.getElementById("search-overlay");
+        const closeBtn = document.getElementById("btn-search-close");
+        const clearBtn = document.getElementById("btn-search-clear");
+        const searchInput = document.getElementById("global-search-input");
+        const resultsContainer = document.getElementById("search-results");
+
+        if (!overlay || !searchInput) return;
+
+        function openSearch() {
+          playFeedbackSound("click");
+          overlay.classList.add("open");
+          setTimeout(() => searchInput.focus(), 100);
+          renderResults(searchInput.value.trim());
+        }
+
+        function closeSearch() {
+          overlay.classList.remove("open");
+        }
+
+        toggleBtn.addEventListener("click", openSearch);
+        closeBtn.addEventListener("click", closeSearch);
+        overlay.addEventListener("click", (e) => {
+          if (e.target === overlay) closeSearch();
+        });
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && overlay.classList.contains("open")) {
+            closeSearch();
+          }
+        });
+
+        document.querySelectorAll(".search-chip").forEach(chip => {
+          chip.addEventListener("click", () => {
+            playFeedbackSound("click");
+            const term = chip.getAttribute("data-search");
+            searchInput.value = term;
+            renderResults(term);
+          });
+        });
+
+        searchInput.addEventListener("input", () => {
+          const val = searchInput.value.trim();
+          if (clearBtn) clearBtn.style.display = val ? "inline-flex" : "none";
+          renderResults(val);
+        });
+
+        if (clearBtn) {
+          clearBtn.addEventListener("click", () => {
+            searchInput.value = "";
+            clearBtn.style.display = "none";
+            searchInput.focus();
+            renderResults("");
+          });
+        }
+
+        function renderResults(query) {
+          const q = query.toLowerCase();
+          resultsContainer.innerHTML = "";
+
+          if (!q) {
+            resultsContainer.innerHTML = `
+              <div style="padding:1.5rem 0; text-align:center; color:var(--text-dim); font-size:0.9375rem;">
+                Type a dish name, ingredient, halwai, or select a suggestion above.
+              </div>
+            `;
+            return;
+          }
+
+          const matches = adventureData.filter(item => {
+            return (
+              item.title.toLowerCase().includes(q) ||
+              item.description.toLowerCase().includes(q) ||
+              item.location.toLowerCase().includes(q) ||
+              item.categoryLabel.toLowerCase().includes(q) ||
+              item.tags.some(t => t.toLowerCase().includes(q))
+            );
+          });
+
+          if (matches.length === 0) {
+            resultsContainer.innerHTML = `
+              <div style="padding:2.5rem 1rem; text-align:center;">
+                <div style="font-weight:700; color:var(--text-heading); font-size:1.1rem; margin-bottom:0.35rem;">No discoveries found for "${query}"</div>
+                <p style="color:var(--text-muted); font-size:0.875rem;">Try searching for "Bedmi", "Kachori", "Laal Maas", or "Jalebi".</p>
+              </div>
+            `;
+            return;
+          }
+
+          matches.forEach(item => {
+            const row = document.createElement("div");
+            row.className = "search-result-item";
+            row.innerHTML = `
+              <img src="${item.image}" alt="${item.title}" class="search-result-thumb">
+              <div class="search-result-info">
+                <div class="search-result-title">${item.title}</div>
+                <div class="search-result-meta">${item.location} · <span style="color:var(--accent); font-weight:700;">★ ${item.rating}</span></div>
+              </div>
+              <svg class="icon" viewBox="0 0 24 24" style="color:var(--text-dim);"><path d="m9 18 6-6-6-6"/></svg>
+            `;
+            row.addEventListener("click", () => {
+              closeSearch();
+              openAdventureModal(item.id);
+            });
+            resultsContainer.appendChild(row);
+          });
+        }
+      }
+
+      /* ==========================================================================
+         SECTION 05: ADVENTURES GRID & FILTERING
+         ========================================================================== */
+      function initAdventures() {
+        const grid = document.getElementById("adventures-grid");
+        const categoryTabs = document.querySelectorAll(".category-tab-btn");
+        const searchInput = document.getElementById("adventures-search-input");
+        const sortSelect = document.getElementById("adventures-sort");
+        const surpriseBtn = document.getElementById("btn-surprise-me");
+
+        if (!grid) return;
+
+        function renderAdventures() {
+          const category = state.activeCategory;
+          const query = (searchInput ? searchInput.value.trim().toLowerCase() : "");
+          const sortVal = (sortSelect ? sortSelect.value : "featured");
+
+          let list = adventureData.filter(item => {
+            const matchesCat = (category === "all" || item.category === category);
+            const matchesQuery = (!query || 
+              item.title.toLowerCase().includes(query) ||
+              item.location.toLowerCase().includes(query) ||
+              item.description.toLowerCase().includes(query) ||
+              item.tags.some(t => t.toLowerCase().includes(query))
+            );
+            return matchesCat && matchesQuery;
+          });
+
+          if (sortVal === "rating") {
+            list.sort((a, b) => b.rating - a.rating);
+          } else if (sortVal === "price-asc") {
+            list.sort((a, b) => parseInt(a.price.replace(/\D/g, "") || "0") - parseInt(b.price.replace(/\D/g, "") || "0"));
+          } else if (sortVal === "price-desc") {
+            list.sort((a, b) => parseInt(b.price.replace(/\D/g, "") || "0") - parseInt(a.price.replace(/\D/g, "") || "0"));
+          }
+
+          grid.innerHTML = "";
+
+          if (list.length === 0) {
+            grid.innerHTML = `
+              <div class="empty-state-box" style="grid-column: 1 / -1;">
+                <svg class="empty-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                <h3 style="font-size:1.3rem; margin-bottom:0.5rem;">No food discoveries match your filter</h3>
+                <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1.5rem;">Try selecting a different category or resetting your search query.</p>
+                <button class="btn btn-secondary" onclick="window.resetAdventureFilters();">Reset Filters</button>
+              </div>
+            `;
+            return;
+          }
+
+          list.forEach(item => {
+            const isFav = state.favourites.includes(item.id);
+            const card = document.createElement("article");
+            card.className = "adventure-card";
+            card.id = `card-${item.id}`;
+
+            const tagsHTML = item.tags.slice(0, 3).map(tag => `<span class="card-tag">${escapeHtml(tag)}</span>`).join("");
+            const cardTitle = escapeHtml(item.title);
+            const cardLocation = escapeHtml(item.location);
+            const cardDescription = escapeHtml(item.description);
+            const cardCategory = escapeHtml(item.categoryLabel);
+            const cardPrice = escapeHtml(String(item.price || "").split(" ")[0]);
+            const cardImage = escapeHtml(item.image);
+
+            card.innerHTML = `
+              <div class="adventure-card-media">
+                <img src="${cardImage}" alt="${cardTitle}" class="adventure-card-img" loading="lazy">
+                <span class="card-category-tag">${cardCategory}</span>
+                <button class="card-fav-btn ${isFav ? 'favorited' : ''}" data-fav-id="${item.id}" aria-label="${isFav ? 'Remove from favourites' : 'Save to favourites'}">
+                  <svg class="icon" viewBox="0 0 24 24" style="width:18px; height:18px; fill:${isFav ? 'currentColor' : 'none'};"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+              </div>
+              <div class="adventure-card-body">
+                <div class="card-meta-line">
+                  <svg class="icon" viewBox="0 0 24 24" style="width:14px; height:14px; color:var(--accent);"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>${cardLocation}</span>
+                </div>
+                <h3 class="card-title">${cardTitle}</h3>
+                <p class="card-desc">${cardDescription}</p>
+                <div class="card-tags-row">${tagsHTML}</div>
+                <div class="card-footer-strip">
+                  <div>
+                    <div style="font-size:0.75rem; color:var(--text-dim);">APPROX. PRICE</div>
+                    <div class="card-price">${cardPrice}</div>
+                  </div>
+                  <div class="card-actions-row">
+                    <button class="btn btn-outline" style="padding:0.45rem 0.85rem; font-size:0.8125rem;" data-share-id="${item.id}">
+                      Share
+                    </button>
+                    <button class="btn btn-primary" style="padding:0.45rem 1rem; font-size:0.8125rem;" data-detail-id="${item.id}">
+                      Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            `;
+
+            const favBtn = card.querySelector(".card-fav-btn");
+            favBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              toggleFavourite(item.id);
+            });
+
+            const shareBtn = card.querySelector("[data-share-id]");
+            shareBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              openShareModal(item.id);
+            });
+
+            const detailBtn = card.querySelector("[data-detail-id]");
+            detailBtn.addEventListener("click", () => {
+              openAdventureModal(item.id);
+            });
+
+            card.addEventListener("click", (e) => {
+              if (!e.target.closest("button")) {
+                openAdventureModal(item.id);
+              }
+            });
+
+            grid.appendChild(card);
+          });
+        }
+
+        categoryTabs.forEach(tab => {
+          tab.addEventListener("click", () => {
+            playFeedbackSound("click");
+            categoryTabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+            state.activeCategory = tab.getAttribute("data-category");
+            renderAdventures();
+          });
+        });
+
+        if (searchInput) searchInput.addEventListener("input", renderAdventures);
+        if (sortSelect) sortSelect.addEventListener("change", () => {
+          playFeedbackSound("click");
+          renderAdventures();
+        });
+
+        if (surpriseBtn) {
+          surpriseBtn.addEventListener("click", () => {
+            playFeedbackSound("surprise");
+            const randomPick = adventureData[Math.floor(Math.random() * adventureData.length)];
+            showToast(`🎲 Surprise Pick: ${randomPick.title}!`);
+            openAdventureModal(randomPick.id);
+          });
+        }
+
+        window.resetAdventureFilters = function () {
+          state.activeCategory = "all";
+          categoryTabs.forEach(t => t.classList.toggle("active", t.getAttribute("data-category") === "all"));
+          if (searchInput) searchInput.value = "";
+          if (sortSelect) sortSelect.value = "featured";
+          renderAdventures();
+        };
+
+        window.filterByCategory = function (cat) {
+          state.activeCategory = cat;
+          categoryTabs.forEach(t => t.classList.toggle("active", t.getAttribute("data-category") === cat));
+          renderAdventures();
+        };
+
+        renderAdventures();
+      }
+
+      /* ==========================================================================
+         ADVENTURE DETAILS MODAL (WITH DIRECT INSTAGRAM REEL LINK)
+         ========================================================================== */
+      function openAdventureModal(id) {
+        const item = adventureData.find(a => a.id === id);
+        if (!item) return;
+
+        playFeedbackSound("click");
+
+        if (!state.recentlyViewed.includes(id)) {
+          state.recentlyViewed.unshift(id);
+          if (state.recentlyViewed.length > 20) state.recentlyViewed.pop();
+          localStorage.setItem(STORAGE_KEYS.RECENTLY_VIEWED, JSON.stringify(state.recentlyViewed));
+          updateCollectionCounts();
+        }
+
+        const modal = document.getElementById("adventure-modal");
+        const closeBtn = document.getElementById("btn-detail-modal-close");
+        const img = document.getElementById("modal-detail-img");
+        const cat = document.getElementById("modal-detail-cat");
+        const loc = document.getElementById("modal-detail-location");
+        const score = document.getElementById("modal-detail-score");
+        const title = document.getElementById("modal-detail-title");
+        const desc = document.getElementById("modal-detail-desc");
+        const notes = document.getElementById("modal-detail-notes");
+        const price = document.getElementById("modal-detail-price");
+        const time = document.getElementById("modal-detail-time");
+        const diet = document.getElementById("modal-detail-diet");
+        const favBtn = document.getElementById("modal-detail-fav-btn");
+        const favText = document.getElementById("modal-detail-fav-text");
+        const shareBtn = document.getElementById("modal-detail-share-btn");
+        const instaLink = document.getElementById("modal-detail-insta-link");
+
+        if (img) img.src = item.image;
+        if (cat) cat.textContent = item.categoryLabel;
+        if (loc) loc.textContent = item.location;
+        if (score) score.textContent = `Rajat's Rating: ${item.rating}/10`;
+        if (title) title.textContent = item.title;
+        if (desc) desc.textContent = item.description;
+        if (notes) notes.textContent = item.tastingNotes;
+        if (price) price.textContent = item.price;
+        if (time) time.textContent = item.time;
+        if (diet) diet.textContent = item.diet;
+
+        if (instaLink) {
+          instaLink.href = item.instaReel || "https://www.instagram.com/taste_safari_/reels/";
+        }
+
+        const isFav = state.favourites.includes(item.id);
+        if (favText) favText.textContent = isFav ? "Remove Favourite" : "Save to Favourites";
+
+        if (favBtn) {
+          favBtn.onclick = () => {
+            toggleFavourite(item.id);
+            const nowFav = state.favourites.includes(item.id);
+            favText.textContent = nowFav ? "Remove Favourite" : "Save to Favourites";
+          };
+        }
+
+        if (shareBtn) {
+          shareBtn.onclick = () => {
+            openShareModal(item.id);
+          };
+        }
+
+        modal.classList.add("open");
+        history.replaceState(null, "", `#adventure-${item.id}`);
+
+        closeBtn.onclick = () => {
+          modal.classList.remove("open");
+          history.replaceState(null, "", window.location.pathname);
+        };
+        modal.onclick = (e) => {
+          if (e.target === modal) {
+            modal.classList.remove("open");
+            history.replaceState(null, "", window.location.pathname);
+          }
+        };
+      }
+
+      /* ==========================================================================
+         FAVOURITES & COLLECTIONS
+         ========================================================================== */
+      function toggleFavourite(id) {
+        const item = adventureData.find(a => a.id === id);
+        if (!item) return;
+
+        const index = state.favourites.indexOf(id);
+        if (index > -1) {
+          state.favourites.splice(index, 1);
+          showToast(`Removed "${item.title}" from favourites`);
+          playFeedbackSound("click");
+        } else {
+          state.favourites.push(id);
+          showToast(`Saved "${item.title}" to favourites!`);
+          playFeedbackSound("success");
+        }
+
+        localStorage.setItem(STORAGE_KEYS.FAVOURITES, JSON.stringify(state.favourites));
+        updateCollectionCounts();
+
+        document.querySelectorAll(`[data-fav-id="${id}"]`).forEach(btn => {
+          const isFav = state.favourites.includes(id);
+          btn.classList.toggle("favorited", isFav);
+          const svg = btn.querySelector("svg");
+          if (svg) svg.style.fill = isFav ? "currentColor" : "none";
+        });
+
+        if (document.getElementById("collections")) {
+          renderCollections();
+        }
+      }
+
+      function updateCollectionCounts() {
+        const favBadge = document.getElementById("fav-count-badge");
+        const recentBadge = document.getElementById("recent-count-badge");
+        if (favBadge) favBadge.textContent = state.favourites.length;
+        if (recentBadge) recentBadge.textContent = state.recentlyViewed.length;
+      }
+
+      /* ==========================================================================
+         SHARE SPOT MODAL
+         ========================================================================== */
+      function openShareModal(id) {
+        const item = adventureData.find(a => a.id === id);
+        if (!item) return;
+
+        state.currentAdventureForShare = item;
+        playFeedbackSound("click");
+
+        const modal = document.getElementById("share-modal");
+        const closeBtn = document.getElementById("btn-share-modal-close");
+        const title = document.getElementById("share-modal-title");
+        const linkInput = document.getElementById("share-link-input");
+        const copyBtn = document.getElementById("btn-copy-share-url");
+        const copyTile = document.getElementById("share-opt-copy");
+        const nativeTile = document.getElementById("share-opt-native");
+        const waLink = document.getElementById("share-opt-whatsapp");
+        const tgLink = document.getElementById("share-opt-telegram");
+        const xLink = document.getElementById("share-opt-x");
+        const fbLink = document.getElementById("share-opt-facebook");
+
+        if (title) title.textContent = `Share: ${item.title}`;
+
+        const shareUrl = `${window.location.origin}${window.location.pathname}#adventure-${item.id}`;
+        if (linkInput) linkInput.value = shareUrl;
+
+        const waText = encodeURIComponent(`${item.shareText}\n\n📍 Location: ${item.location}\n⭐ Rating: ${item.rating}/10\n\nExplore this discovery on Taste Safari with Rajat: ${shareUrl}`);
+        if (waLink) waLink.href = `https://api.whatsapp.com/send?text=${waText}`;
+
+        if (tgLink) tgLink.href = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(item.shareText)}`;
+        if (xLink) xLink.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(item.shareText)}&url=${encodeURIComponent(shareUrl)}&hashtags=TasteSafari,Bharatpur,FoodVlog`;
+        if (fbLink) fbLink.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+
+        if (nativeTile) {
+          nativeTile.onclick = async () => {
+            if (navigator.share) {
+              try {
+                await navigator.share({
+                  title: item.title,
+                  text: item.shareText,
+                  url: shareUrl
+                });
+                showToast("Shared successfully!");
+                playFeedbackSound("success");
+                modal.classList.remove("open");
+              } catch (err) {
+                if (err.name !== "AbortError") copyUrlToClipboard(shareUrl);
+              }
+            } else {
+              copyUrlToClipboard(shareUrl);
+            }
+          };
+        }
+
+        function copyUrlToClipboard(url) {
+          navigator.clipboard.writeText(url).then(() => {
+            playFeedbackSound("success");
+            showToast("✓ Link copied to clipboard!");
+            if (copyBtn) copyBtn.textContent = "Copied!";
+            setTimeout(() => {
+              if (copyBtn) copyBtn.textContent = "Copy";
+            }, 2500);
+          }).catch(() => {
+            if (linkInput) {
+              linkInput.select();
+              document.execCommand("copy");
+              showToast("✓ Link copied to clipboard!");
+            }
+          });
+        }
+
+        if (copyBtn) copyBtn.onclick = () => copyUrlToClipboard(shareUrl);
+        if (copyTile) copyTile.onclick = () => copyUrlToClipboard(shareUrl);
+
+        modal.classList.add("open");
+        closeBtn.onclick = () => modal.classList.remove("open");
+        modal.onclick = (e) => {
+          if (e.target === modal) modal.classList.remove("open");
+        };
+      }
+
+      /* ==========================================================================
+         SECTION 06: COLLECTIONS (SAVED & RECENT)
+         ========================================================================== */
+      function initCollections() {
+        const tabFavs = document.getElementById("tab-favs");
+        const tabRecent = document.getElementById("tab-recent");
+        const clearBtn = document.getElementById("btn-clear-collection");
+
+        if (tabFavs) {
+          tabFavs.addEventListener("click", () => {
+            playFeedbackSound("click");
+            tabFavs.classList.add("active");
+            if (tabRecent) tabRecent.classList.remove("active");
+            state.activeCollectionTab = "favs";
+            renderCollections();
+          });
+        }
+
+        if (tabRecent) {
+          tabRecent.addEventListener("click", () => {
+            playFeedbackSound("click");
+            tabRecent.classList.add("active");
+            if (tabFavs) tabFavs.classList.remove("active");
+            state.activeCollectionTab = "recent";
+            renderCollections();
+          });
+        }
+
+        if (clearBtn) {
+          clearBtn.addEventListener("click", () => {
+            playFeedbackSound("click");
+            if (state.activeCollectionTab === "favs") {
+              state.favourites = [];
+              localStorage.setItem(STORAGE_KEYS.FAVOURITES, "[]");
+              showToast("Cleared all saved favourites");
+            } else {
+              state.recentlyViewed = [];
+              localStorage.setItem(STORAGE_KEYS.RECENTLY_VIEWED, "[]");
+              showToast("Cleared recently viewed history");
+            }
+            updateCollectionCounts();
+            renderCollections();
+            document.querySelectorAll(".card-fav-btn").forEach(btn => {
+              btn.classList.remove("favorited");
+              const svg = btn.querySelector("svg");
+              if (svg) svg.style.fill = "none";
+            });
+          });
+        }
+
+        updateCollectionCounts();
+        renderCollections();
+      }
+
+      function renderCollections() {
+        const grid = document.getElementById("collections-grid");
+        if (!grid) return;
+
+        const isFavs = (state.activeCollectionTab === "favs");
+        const ids = isFavs ? state.favourites : state.recentlyViewed;
+
+        grid.innerHTML = "";
+
+        if (ids.length === 0) {
+          grid.innerHTML = `
+            <div class="empty-state-box" style="grid-column: 1 / -1;">
+              <svg class="empty-icon" viewBox="0 0 24 24"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+              <h3 style="font-size:1.3rem; margin-bottom:0.5rem;">${isFavs ? 'No Saved Favourites Yet' : 'No Recently Viewed Discoveries'}</h3>
+              <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1.5rem;">
+                ${isFavs ? 'Click the heart icon on any food discovery to save it for your next trip.' : 'Explore adventures above to automatically build your tasting trail.'}
+              </p>
+              <a href="#adventures" class="btn btn-primary">Browse Adventures</a>
+            </div>
+          `;
+          return;
+        }
+
+        ids.forEach(id => {
+          const item = adventureData.find(a => a.id === id);
+          if (!item) return;
+
+          const cardTitle = escapeHtml(item.title);
+          const cardLocation = escapeHtml(item.location);
+          const cardDescription = escapeHtml(item.description);
+          const cardCategory = escapeHtml(item.categoryLabel);
+          const cardPrice = escapeHtml(String(item.price || "").split(" ")[0]);
+          const cardImage = escapeHtml(item.image);
+          const card = document.createElement("article");
+          card.className = "adventure-card";
+          card.innerHTML = `
+            <div class="adventure-card-media">
+              <img src="${cardImage}" alt="${cardTitle}" class="adventure-card-img" loading="lazy">
+              <span class="card-category-tag">${cardCategory}</span>
+              ${isFavs ? `
+                <button class="card-fav-btn favorited" data-fav-id="${item.id}" aria-label="Remove favourite" title="Remove from favourites">
+                  <svg class="icon" viewBox="0 0 24 24" style="width:18px; height:18px; fill:currentColor;"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+              ` : ''}
+            </div>
+            <div class="adventure-card-body">
+              <div class="card-meta-line">
+                <svg class="icon" viewBox="0 0 24 24" style="width:14px; height:14px; color:var(--accent);"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>${cardLocation}</span>
+              </div>
+              <h3 class="card-title">${cardTitle}</h3>
+              <p class="card-desc">${cardDescription}</p>
+              <div class="card-footer-strip">
+                <div>
+                  <div style="font-size:0.75rem; color:var(--text-dim);">PRICE</div>
+                  <div class="card-price">${cardPrice}</div>
+                </div>
+                <div class="card-actions-row">
+                  <button class="btn btn-outline" style="padding:0.45rem 0.85rem; font-size:0.8125rem;" onclick="openShareModal('${item.id}');">Share</button>
+                  <button class="btn btn-primary" style="padding:0.45rem 1rem; font-size:0.8125rem;" onclick="openAdventureModal('${item.id}');">Details</button>
+                </div>
+              </div>
+            </div>
+          `;
+
+          if (isFavs) {
+            const favBtn = card.querySelector(".card-fav-btn");
+            if (favBtn) {
+              favBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                toggleFavourite(item.id);
+              });
+            }
+          }
+
+          card.addEventListener("click", (e) => {
+            if (!e.target.closest("button")) openAdventureModal(item.id);
+          });
+
+          grid.appendChild(card);
+        });
+      }
+
+      /* ==========================================================================
+         SECTION 07: VIDEOS AND THEATRE PLAYER
+         (Plays dedicated culinary food videos — strictly NO intro video here)
+         ========================================================================== */
+      function initVideoPlayer() {
+        const modal = document.getElementById("theatre-video-modal");
+        const videoElem = document.getElementById("theatre-video");
+        const titleElem = document.getElementById("theatre-title");
+        const closeBtn = document.getElementById("btn-theatre-close");
+
+        function openTheatreVideo(src, title) {
+          playFeedbackSound("click");
+          if (!modal || !videoElem) return;
+          if (titleElem) titleElem.textContent = title;
+          videoElem.src = src;
+          modal.classList.add("open");
+          videoElem.play().catch(() => {});
+        }
+
+        function closeTheatreVideo() {
+          if (!modal || !videoElem) return;
+          videoElem.pause();
+          modal.classList.remove("open");
+        }
+
+        // Attach to all play buttons and preview cards in videos section
+        document.querySelectorAll(".featured-video-preview, .btn-play-theatre").forEach(el => {
+          el.addEventListener("click", () => {
+            const src = el.getAttribute("data-video-src");
+            const title = el.getAttribute("data-video-title") || "Culinary Episode";
+            if (!src) return;
+            if (el.getAttribute("data-video-type") === "external") {
+              window.open(src, "_blank", "noopener,noreferrer");
+              return;
+            }
+            openTheatreVideo(src, title);
+          });
+        });
+
+        if (closeBtn) closeBtn.addEventListener("click", closeTheatreVideo);
+        if (modal) {
+          modal.addEventListener("click", (e) => {
+            if (e.target === modal) closeTheatreVideo();
+          });
+        }
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && modal && modal.classList.contains("open")) {
+            closeTheatreVideo();
+          }
+        });
+      }
+
+      /* ==========================================================================
+         SECTION 08: GALLERY & CUSTOM LIGHTBOX
+         (Pure culinary food photography — strictly NO intro video here)
+         ========================================================================== */
+      function initGalleryLightbox() {
+        const grid = document.getElementById("gallery-grid");
+        const lightbox = document.getElementById("gallery-lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const lightboxTitle = document.getElementById("lightbox-title");
+        const lightboxCaption = document.getElementById("lightbox-caption");
+        const lightboxCounter = document.getElementById("lightbox-counter");
+        const closeBtn = document.getElementById("btn-lightbox-close");
+        const prevBtn = document.getElementById("btn-lightbox-prev");
+        const nextBtn = document.getElementById("btn-lightbox-next");
+
+        if (!grid || !lightbox) return;
+
+        grid.innerHTML = "";
+        galleryData.forEach((item, index) => {
+          const tile = document.createElement("div");
+          tile.className = "gallery-item";
+          const itemImage = escapeHtml(item.image);
+          const itemTitle = escapeHtml(item.title);
+          const itemLocation = escapeHtml(item.location || "");
+          tile.innerHTML = `
+            <img src="${itemImage}" alt="${itemTitle}" class="gallery-img" loading="lazy" onerror="if(!this.dataset.retry){this.dataset.retry='1';this.src='public/${itemImage}';}">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">${itemTitle}</div>
+              <div class="gallery-item-location">${itemLocation}</div>
+            </div>
+          `;
+          tile.addEventListener("click", () => {
+            openLightbox(index);
+          });
+          grid.appendChild(tile);
+        });
+
+        function openLightbox(index) {
+          playFeedbackSound("click");
+          state.currentLightboxIndex = index;
+          updateLightboxContent();
+          lightbox.classList.add("open");
+        }
+
+        function closeLightbox() {
+          lightbox.classList.remove("open");
+        }
+
+        function updateLightboxContent() {
+          const item = galleryData[state.currentLightboxIndex];
+          if (!item) return;
+          if (lightboxImg) lightboxImg.src = item.image;
+          if (lightboxTitle) lightboxTitle.textContent = item.title;
+          if (lightboxCaption) lightboxCaption.textContent = item.location ? `${item.caption} (${item.location})` : item.caption;
+          if (lightboxCounter) lightboxCounter.textContent = `${state.currentLightboxIndex + 1} of ${galleryData.length}`;
+        }
+
+        function showNext() {
+          playFeedbackSound("click");
+          state.currentLightboxIndex = (state.currentLightboxIndex + 1) % galleryData.length;
+          updateLightboxContent();
+        }
+
+        function showPrev() {
+          playFeedbackSound("click");
+          state.currentLightboxIndex = (state.currentLightboxIndex - 1 + galleryData.length) % galleryData.length;
+          updateLightboxContent();
+        }
+
+        if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+        if (nextBtn) nextBtn.addEventListener("click", showNext);
+        if (prevBtn) prevBtn.addEventListener("click", showPrev);
+
+        lightbox.addEventListener("click", (e) => {
+          if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener("keydown", (e) => {
+          if (!lightbox.classList.contains("open")) return;
+          if (e.key === "Escape") closeLightbox();
+          if (e.key === "ArrowRight") showNext();
+          if (e.key === "ArrowLeft") showPrev();
+        });
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+        lightbox.addEventListener("touchstart", (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        lightbox.addEventListener("touchend", (e) => {
+          touchEndX = e.changedTouches[0].screenX;
+          if (touchStartX - touchEndX > 50) showNext();
+          if (touchEndX - touchStartX > 50) showPrev();
+        }, { passive: true });
+      }
+
+      /* ==========================================================================
+         SECTION 11: CONTACT FORM VALIDATION & SUBMISSION
+         ========================================================================== */
+      function initContactForm() {
+        const form = document.getElementById("safari-contact-form");
+        const nameInput = document.getElementById("contact-name");
+        const emailInput = document.getElementById("contact-email");
+        const phoneInput = document.getElementById("contact-phone");
+        const entityInput = document.getElementById("contact-entity");
+        const typeSelect = document.getElementById("contact-type");
+        const msgInput = document.getElementById("contact-msg");
+        const consentCheckbox = document.getElementById("contact-consent");
+        const charCounter = document.getElementById("msg-char-count");
+        const whatsappBtn = document.getElementById("btn-whatsapp-direct");
+
+        const errName = document.getElementById("err-name");
+        const errEmail = document.getElementById("err-email");
+        const errPhone = document.getElementById("err-phone");
+        const errMsg = document.getElementById("err-msg");
+        const errConsent = document.getElementById("err-consent");
+
+        if (!form) return;
+
+        if (msgInput && charCounter) {
+          msgInput.addEventListener("input", () => {
+            const count = msgInput.value.length;
+            charCounter.textContent = count;
+            if (count > 600) {
+              msgInput.value = msgInput.value.substring(0, 600);
+              charCounter.textContent = 600;
+            }
+          });
+        }
+
+        if (whatsappBtn) {
+          whatsappBtn.addEventListener("click", () => {
+            playFeedbackSound("click");
+            const name = nameInput.value.trim() || "Visitor";
+            const type = typeSelect.value;
+            const message = msgInput.value.trim() || "Hello Rajat, I would like to connect regarding Taste Safari.";
+            const waText = encodeURIComponent(`*Taste Safari Inquiry*\nName: ${name}\nCategory: ${type}\nMessage: ${message}`);
+            window.open(`https://wa.me/917023332362?text=${waText}`, "_blank");
+          });
+        }
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          let isValid = true;
+          const name = nameInput.value.trim();
+          const email = emailInput.value.trim();
+          const phone = phoneInput.value.trim();
+          const entity = entityInput.value.trim();
+          const type = typeSelect.value;
+          const msg = msgInput.value.trim();
+          const consent = consentCheckbox.checked;
+
+          if (name.length < 2) {
+            errName.style.display = "block";
+            isValid = false;
+          } else {
+            errName.style.display = "none";
+          }
+
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            errEmail.style.display = "block";
+            isValid = false;
+          } else {
+            errEmail.style.display = "none";
+          }
+
+          const phoneDigits = phone.replace(/\D/g, "");
+          if (phoneDigits.length < 8 || phoneDigits.length > 15) {
+            errPhone.style.display = "block";
+            isValid = false;
+          } else {
+            errPhone.style.display = "none";
+          }
+
+          if (msg.length < 10) {
+            errMsg.style.display = "block";
+            isValid = false;
+          } else {
+            errMsg.style.display = "none";
+          }
+
+          if (!consent) {
+            errConsent.style.display = "block";
+            isValid = false;
+          } else {
+            errConsent.style.display = "none";
+          }
+
+          if (!isValid) {
+            playFeedbackSound("click");
+            showToast("Please complete the required form fields.");
+            return;
+          }
+
+          playFeedbackSound("success");
+          try {
+            const response = await fetch("/api/collaborations", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ name, email, phone, brand: entity, collaboration_type: type, message: msg, website: "" })
+            });
+            const result = await response.json().catch(() => ({}));
+            if (!response.ok) throw new Error(result.error || "Unable to send enquiry.");
+            showToast("✓ Enquiry sent successfully. Rajat will review it soon.");
+            form.reset();
+            if (charCounter) charCounter.textContent = "0";
+          } catch (error) {
+            showToast(error.message || "Unable to send enquiry right now.");
+          }
+        });
+      }
+
+      window.selectInquiryType = function (typeName) {
+        const typeSelect = document.getElementById("contact-type");
+        if (typeSelect) {
+          for (let i = 0; i < typeSelect.options.length; i++) {
+            if (typeSelect.options[i].value.includes(typeName)) {
+              typeSelect.selectedIndex = i;
+              break;
+            }
+          }
+        }
+      };
+
+      /* ==========================================================================
+         DEEP LINKING VIA URL HASH (#adventure-[id])
+         ========================================================================== */
+      function initDeepLinks() {
+        const hash = window.location.hash;
+        if (hash.startsWith("#adventure-")) {
+          const advId = hash.replace("#adventure-", "");
+          setTimeout(() => {
+            openAdventureModal(advId);
+          }, 300);
+        }
+      }
+
+      window.openAdventureModal = openAdventureModal;
+      window.openShareModal = openShareModal;
+      window.toggleFavourite = toggleFavourite;
+
+      /* ==========================================================================
+         LIVE CONTENT FROM FLASK API
+         ========================================================================== */
+      async function initPublicContent() {
+        let payload = null;
+        try {
+          payload = await window.__tasteSafariBootstrap;
+        } catch (error) {
+          console.warn("Live content unavailable.", error);
+        }
+        const data = payload && payload.ok ? payload : { adventures: [], videos: [], gallery: [], categories: [] };
+        adventureData.length = 0;
+        adventureData.push(...(Array.isArray(data.adventures) ? data.adventures : []));
+        galleryData.length = 0;
+        galleryData.push(...(Array.isArray(data.gallery) ? data.gallery : []));
+        const tabs = document.getElementById("category-tabs");
+        if (tabs) {
+          const categories = Array.isArray(data.categories) ? data.categories : [];
+          tabs.innerHTML = '<button class="category-tab-btn active" data-category="all" role="tab">All Discoveries</button>' +
+            categories.map(category => `<button class="category-tab-btn" data-category="${escapeHtml(category.slug)}" role="tab">${escapeHtml(category.name)}</button>`).join("");
+        }
+        renderManagedVideos(Array.isArray(data.videos) ? data.videos : []);
+        if (!payload || !payload.ok) showToast("Live content is unavailable right now.");
+      }
+
+      function renderManagedVideos(videos) {
+        const grid = document.querySelector(".video-bento-grid");
+        const reels = document.querySelector(".reels-grid");
+        if (!grid || !reels) return;
+        grid.innerHTML = "";
+        reels.innerHTML = "";
+        if (!videos.length) {
+          const empty = `<div class="empty-state-box" style="grid-column:1/-1;"><h3 style="font-size:1.3rem;margin-bottom:.5rem;">No videos published yet</h3><p style="color:var(--text-muted);font-size:.95rem;">Check back soon for new Taste Safari episodes.</p></div>`;
+          grid.innerHTML = empty;
+          reels.innerHTML = empty;
+          return;
+        }
+        videos.slice(0, 6).forEach(video => {
+          const isExternal = video.kind === "external";
+          const title = escapeHtml(video.title || "Taste Safari video");
+          const description = escapeHtml(video.description || "Watch this Taste Safari culinary episode.");
+          const category = escapeHtml(String(video.category_name || "Taste Safari").toUpperCase());
+          const platform = escapeHtml(String(video.platform || "External").toUpperCase());
+          const thumb = escapeHtml(video.thumbnail_url || "assets/taste-safari-logo.png");
+          const link = escapeHtml(video.reel_link || "https://www.instagram.com/taste_safari_/reels/");
+          const action = isExternal
+            ? `<a href="${link}" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><span>Watch on ${platform}</span></a>`
+            : `<button class="btn btn-primary btn-play-theatre" data-video-src="${escapeHtml(video.video_url || "")}" data-video-title="${title}"><span>Watch in Taste Safari</span></button>`;
+          const card = document.createElement("div");
+          card.className = "featured-video-card";
+          card.innerHTML = `
+            <div class="featured-video-preview" data-video-type="${isExternal ? 'external' : 'local'}" data-video-src="${isExternal ? link : escapeHtml(video.video_url || "")}" data-video-title="${title}">
+              <img src="${thumb}" alt="${title}" class="featured-video-img">
+              <div class="play-overlay-button"><svg class="icon" viewBox="0 0 24 24" style="width:28px;height:28px;fill:#000"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            </div>
+            <div class="featured-video-body">
+              <div style="font-size:.8125rem;color:var(--accent);font-weight:700;margin-bottom:.5rem">${category} · ${platform}</div>
+              <h3 style="font-size:1.35rem;margin-bottom:.75rem">${title}</h3>
+              <p style="color:var(--text-muted);font-size:.9375rem;line-height:1.6;margin-bottom:1.25rem">${description}</p>
+              <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:auto">${action}<a href="https://www.instagram.com/taste_safari_/reels/" target="_blank" rel="noopener noreferrer" class="btn btn-insta"><span>Reel Link</span></a></div>
+            </div>`;
+          grid.appendChild(card);
+          const reel = document.createElement(isExternal ? "a" : "div");
+          if (isExternal) { reel.href = video.reel_link || "https://www.instagram.com/taste_safari_/reels/"; reel.target = "_blank"; reel.rel = "noopener noreferrer"; }
+          reel.className = "reel-card";
+          reel.innerHTML = `<img src="${thumb}" alt="${title}" class="reel-img"><div class="reel-scrim"></div><div class="reel-content-bottom"><div class="reel-caption">${title}</div><div class="reel-ig-btn"><span>Watch on ${platform}</span></div></div>`;
+          reels.appendChild(reel);
+        });
+      }
+
+      /* ==========================================================================
+         DOM INITIALIZATION
+         ========================================================================== */
+      document.addEventListener("DOMContentLoaded", async () => {
+        await initPublicContent();
+        initVideoPlayer();
+        initGalleryLightbox();
+        initOpeningScreen();
+        initNavigation();
+        initSettings();
+        initSearch();
+        initAdventures();
+        initCollections();
+        initContactForm();
+        initDeepLinks();
+      });
+
+    })();
+  </script>
+</body>
+</html>

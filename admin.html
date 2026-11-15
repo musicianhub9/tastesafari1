@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taste Safari Admin</title>
+  <link rel="icon" href="/assets/taste-safari-logo.png">
+  <link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+  <div id="toast-stack" aria-live="polite"></div>
+
+  <section id="login-view" class="login-shell hidden">
+    <div class="login-card">
+      <div class="brand-lockup">
+        <img src="/assets/taste-safari-logo.png" alt="Taste Safari logo">
+        <div><strong>TASTE SAFARI</strong><span>WITH RAJAT</span></div>
+      </div>
+      <p class="eyebrow">ADMIN CONSOLE</p>
+      <h1>Welcome back.</h1>
+      <p class="muted">Manage adventures, videos, gallery and collaborations.</p>
+      <form id="login-form">
+        <label>Username<input id="login-username" autocomplete="username" required></label>
+        <label>Password<input id="login-password" type="password" autocomplete="current-password" required></label>
+        <button class="primary-btn" type="submit">Sign in securely</button>
+        <div id="login-error" class="form-error"></div>
+      </form>
+    </div>
+  </section>
+
+  <div id="app-shell" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="brand-lockup sidebar-brand">
+        <img src="/assets/taste-safari-logo.png" alt="Taste Safari logo">
+        <div><strong>TASTE SAFARI</strong><span>ADMIN</span></div>
+      </div>
+      <nav id="side-nav">
+        <button data-view="dashboard" class="nav-item active"><span>◉</span>Dashboard</button>
+        <button data-view="adventures" class="nav-item"><span>✦</span>Food Adventures</button>
+        <button data-view="categories" class="nav-item"><span>⌘</span>Categories</button>
+        <button data-view="videos" class="nav-item"><span>▶</span>Reels & Videos</button>
+        <button data-view="gallery" class="nav-item"><span>▦</span>Gallery</button>
+        <button data-view="collaborations" class="nav-item"><span>✉</span>Collaborations</button>
+        <button data-view="settings" class="nav-item"><span>⚙</span>Settings</button>
+      </nav>
+      <button id="logout-btn" class="logout-btn">Logout</button>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button id="menu-toggle" class="icon-btn">☰</button>
+        <div><p class="eyebrow">TASTE SAFARI CMS</p><h2 id="page-title">Dashboard</h2></div>
+        <div class="top-actions"><span id="admin-badge">Administrator</span><a class="ghost-link" href="/" target="_blank">View website ↗</a></div>
+      </header>
+
+      <section id="view-dashboard" class="view active">
+        <div id="stats-grid" class="stats-grid"></div>
+        <div class="grid-two">
+          <article class="panel"><div class="panel-head"><h3>Recently added adventures</h3><button class="text-btn" data-goto="adventures">View all</button></div><div id="recent-adventures" class="activity-list"></div></article>
+          <article class="panel"><div class="panel-head"><h3>Recently added videos</h3><button class="text-btn" data-goto="videos">View all</button></div><div id="recent-videos" class="activity-list"></div></article>
+          <article class="panel"><div class="panel-head"><h3>Recently uploaded photographs</h3><button class="text-btn" data-goto="gallery">View all</button></div><div id="recent-gallery" class="activity-list"></div></article>
+          <article class="panel"><div class="panel-head"><h3>Recent collaboration enquiries</h3><button class="text-btn" data-goto="collaborations">View all</button></div><div id="recent-collaborations" class="activity-list"></div></article>
+        </div>
+      </section>
+
+      <section id="view-adventures" class="view">
+        <div class="toolbar"><div><h3>Food Adventures</h3><p class="muted">Create and manage every published discovery.</p></div><button id="add-adventure" class="primary-btn">+ New adventure</button></div>
+        <div class="filters"><input id="adventure-search" placeholder="Search adventures..."><select id="adventure-category-filter"><option value="">All categories</option></select><select id="adventure-status-filter"><option value="">All statuses</option><option value="published">Published</option><option value="draft">Draft</option></select><select id="adventure-sort"><option value="newest">Newest</option><option value="rating">Highest rating</option></select></div>
+        <div id="adventures-table" class="table-wrap"></div>
+        <div id="adventures-pagination" class="pagination"></div>
+      </section>
+
+      <section id="view-categories" class="view">
+        <div class="toolbar"><div><h3>Categories</h3><p class="muted">Shared with adventures, videos and public filters.</p></div><button id="add-category" class="primary-btn">+ New category</button></div>
+        <div class="filters"><input id="category-search" placeholder="Search categories..."></div>
+        <div id="categories-table" class="table-wrap"></div>
+      </section>
+
+      <section id="view-videos" class="view">
+        <div class="toolbar"><div><h3>Reels & Videos</h3><p class="muted">Full video uploads and external reel links.</p></div><button id="add-video" class="primary-btn">+ New video</button></div>
+        <div class="filters"><input id="video-search" placeholder="Search videos..."><select id="video-type-filter"><option value="">All types</option><option value="full_video">Full video</option><option value="external_reel">External reel</option></select><select id="video-category-filter"><option value="">All categories</option></select><select id="video-status-filter"><option value="">All statuses</option><option value="published">Published</option><option value="draft">Draft</option></select></div>
+        <div id="videos-grid" class="cards-grid"></div>
+        <div id="videos-pagination" class="pagination"></div>
+      </section>
+
+      <section id="view-gallery" class="view">
+        <div class="toolbar"><div><h3>Gallery</h3><p class="muted">Upload, title, describe and reorder photographs.</p></div><button id="add-gallery" class="primary-btn">+ Upload photos</button></div>
+        <div class="filters"><input id="gallery-search" placeholder="Search gallery..."><select id="gallery-status-filter"><option value="">All statuses</option><option value="published">Published</option><option value="draft">Draft</option></select></div>
+        <div id="gallery-grid" class="gallery-admin-grid"></div>
+        <div id="gallery-pagination" class="pagination"></div>
+      </section>
+
+      <section id="view-collaborations" class="view">
+        <div class="toolbar"><div><h3>Collaborations</h3><p class="muted">Every public enquiry is stored here.</p></div></div>
+        <div class="filters"><input id="collab-search" placeholder="Search name, email or message..."><select id="collab-status-filter"><option value="">All statuses</option><option value="new">New</option><option value="read">Read</option><option value="in_progress">In progress</option><option value="replied">Replied</option><option value="closed">Closed</option></select></div>
+        <div id="collaborations-table" class="table-wrap"></div>
+        <div id="collaborations-pagination" class="pagination"></div>
+      </section>
+
+      <section id="view-settings" class="view">
+        <div class="panel settings-panel"><h3>Account & system</h3><p class="muted">Session security, database health and website link.</p><div class="setting-row"><span>Signed in as</span><strong>Administrator</strong></div><div class="setting-row"><span>Database</span><strong>SQLite · taste_safari.db</strong></div><div class="setting-row"><span>Media storage</span><strong>uploads/</strong></div><div class="setting-row"><span>Public website</span><a href="/" target="_blank">Open Taste Safari ↗</a></div></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="modal-root"></div>
+  <script src="/admin.js"></script>
+</body>
+</html>
